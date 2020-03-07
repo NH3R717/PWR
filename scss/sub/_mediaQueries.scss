@@ -1,0 +1,28 @@
+    // media Queries
+    // big
+    @media all and (min-width: 700px) {
+        #header {
+            display: flex;
+            justify-content: space-between;
+            #funkyImageContainer {
+                img {
+                    max-width: 60em;
+                }
+            }
+            // #recipeFormContainer {
+            //     form {}
+        }
+    }
+    
+    //small
+    @media all and (max-width: 699px) {
+        #topHeader {
+            display: block;
+            #funkyImageContainer {
+                width: 100%;
+                // #recipeFormContainer {
+                //     form {}
+                // }
+            }
+        }
+    }

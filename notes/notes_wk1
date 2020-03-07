@@ -1,0 +1,75 @@
+/* 
+   • Umholtz, Tommy
+   • Full Sail University
+   • Web Design and Development, Bachelors of Science – Online
+   • Programming for Web Applications (PWA)
+   
+   */
+
+   Hours (project)
+    mon - m:4 / a:2 / e:0 = 6
+    tue - m:3 / a:3 / e:1 = 6
+    wed - m:3 / a:0 / e:1 = 4
+    thu - m:3 / a:2 / e:2 = 7
+    fri - m:3 / a:2 / e:3 = 8
+    sat - m:3 / a:4 / e:3 = 10
+    sun - m: / a: / e:
+
+    Total – * hours
+
+To Do
+[] 
+[] 
+[] 
+[] 
+[] 
+
+!WPA
+
+jQuery
+
+JavaScript framework/library
+
+    • CDN or locally
+    • syntax
+    –  $(document).ready(function(){
+
+    });
+    – events
+    – effects
+    – callback : action after an action is completed
+
+Assignments
+
+    • 01.01 [Review]
+    [] Wireframes are an approximation? (header – image add recipe form [name, description, category, submit], and responsive recipe section below)
+    [] Noty plugin – a modal displaying a message that an item has been added or deleted is what is required?
+    [] image links 
+    - restaurant – Image by <a href="https://pixabay.com/users/analogicus-8164369/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3537801">analogicus</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3537801">Pixabay</a>
+    – funky_sign_hero – https://www.pexels.com/photo/the-funky-taco-neon-signage-3118074/
+    - fake_taco - https://pixabay.com/illustrations/taco-mexican-food-cheese-tortilla-3643599/
+    - avocado_taco - https://pixabay.com/photos/tacos-mexican-food-lunch-delicious-4540402/
+    - house_taco - https://pixabay.com/photos/taco-time-again-2484868/
+    - regular_taco - https://pixabay.com/photos/taco-mexican-food-food-mexican-2610649/
+
+    • 01.02 [React.js Install]
+
+Discussion
+
+    • 01 [Research & Discussion]
+
+!Statistics
+
+Discussions
+
+    • Statistics Cafe - Open Discussion
+
+    Hi, my name is Tommy I'm currently living and studying in East Asia. I have spent the last 7 years here, recently moving to Taiwan (which is not China) from China where I had lived and worked in Beijing, Shanghai, Guangzhou, Shenzhen and a few other places. If you have any questions about this part of the world feel free to send me a message.
+
+    • 1.0 - Introductions (Degree Program & Goals)
+
+    1. Tommy
+    2. Web Design and Development
+    3. A friend asked me this question earlier in the morning my answer was, "Live in this part of the world (East Asia) and not have to go an office often (but sometimes is good), get to move around a lot (locally and to other regions) and receive a competitive salary.
+
+    More specifically I would like to continue contract/remote consulting work which I have been doing for the last few years. I support teams best by coming in as an outsider with fresh ideas and helping solve problems which they are having trouble addressing. I have a background as an engineer managing cooling plants as well as more recently training auto manufacturing plant managers in China. Right now working with industrial production/manufacturing companies to help develop their training programs or helping them develop web applications for various other purposes seems like an ideal line of work for me. Working remotely for the majority of my time as well being able to spend most of my time is abroad is the most important criteria for what ever I do, I will be looking for a line of work that allows that first along with competitive pay.

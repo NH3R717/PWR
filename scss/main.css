@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/* 
+   • Umholtz, Tommy
+   • Full Sail University
+   • Web Design and Development, Bachelors of Science – Online
+   • Programming for Web Applications (PWA)
+   
+   */
+@font-face {
+  font-family: "Andrographis";
+  src: url("/fonts/Andrographis.ttf");
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("/fonts/Pacifico.ttf");
+}
+
+.gg-trash {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: block;
+  -webkit-transform: scale(var(--ggs, 1));
+          transform: scale(var(--ggs, 1));
+  width: 10px;
+  height: 12px;
+  border: 2px solid transparent;
+  -webkit-box-shadow: 0 0 0 2px, inset -2px 0 0, inset 2px 0 0;
+          box-shadow: 0 0 0 2px, inset -2px 0 0, inset 2px 0 0;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  margin-top: 4px;
+}
+
+.gg-trash::after,
+.gg-trash::before {
+  content: "";
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-trash::after {
+  background: currentColor;
+  border-radius: 3px;
+  width: 16px;
+  height: 2px;
+  top: -4px;
+  left: -5px;
+}
+
+.gg-trash::before {
+  width: 10px;
+  height: 4px;
+  border: 2px solid;
+  border-bottom: transparent;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  top: -7px;
+  left: -2px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+time {
+  font-size: 1em;
+}
+
+@media all and (min-width: 700px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header #funkyImageContainer img {
+    max-width: 60em;
+  }
+}
+
+@media all and (max-width: 699px) {
+  #topHeader {
+    display: block;
+  }
+  #topHeader #funkyImageContainer {
+    width: 100%;
+  }
+}
+
+h1,
+h2 {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+p {
+  font-family: "Pacifico";
+}
+
+header {
+  background-color: black;
+  border-bottom: solid 0.2em #e42c2c;
+}
+
+header #funkyImageContainer img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height: 50em;
+  max-width: 50em;
+  padding-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header #recipeFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #recipeFormContainer form {
+  margin: 6em 4em 5em 4em;
+  padding: 1.4em;
+  display: -ms-grid;
+  display: grid;
+  height: 40em;
+  background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient(#e8f3fb 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), #e8f3fb;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  border-radius: 2em;
+}
+
+header #recipeFormContainer form h3 {
+  font-size: 2.8em;
+  margin-bottom: .8em;
+  color: #e42c2c;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+header #recipeFormContainer form input {
+  width: 90%;
+  height: 1.6em;
+  padding: .75em;
+  margin: .3em 0 1.2em 0;
+  border: none;
+  background: #e42c2c;
+  color: #494313;
+  -webkit-box-shadow: 0.05em 0.05em 0.07em grey;
+          box-shadow: 0.05em 0.05em 0.07em grey;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+  border-radius: .5em;
+  font-size: 1.8em;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+header #recipeFormContainer form button {
+  font-size: 1.8em;
+  margin: .8em 0 .8em .5em;
+  border-radius: .5em;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+  background-color: #ebdd63;
+  color: #007fe7;
+}
+
+.backgroundOverlay {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#tacoSelection {
+  background-image: url("/assets/resized/brick.jpg");
+  background-size: 220px 220px;
+  background-repeat: repeat;
+}
+
+#tacoSelection .topTacoCard {
+  margin: 3em 3.8em;
+  border: solid black .1em;
+  border-radius: 2em;
+  background: #e8f3fb;
+}
+
+#tacoSelection h3 {
+  font-size: 3.2em;
+  text-decoration: underline;
+  padding: 1em 1em 0 1em;
+  color: #e42c2c;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#tacoSelection img {
+  width: 100%;
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+  padding-top: .3em;
+  border-radius: 2em;
+  -webkit-box-shadow: 0.15em 0.15em 0.07em gray;
+          box-shadow: 0.15em 0.15em 0.07em gray;
+}
+
+#tacoSelection #fakeTacoImg {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#tacoSelection .tacoText {
+  padding: 0 1.4em;
+}
+
+#tacoSelection .cardName {
+  font-size: 2.8em;
+  padding: .2em 0;
+  color: #e42c2c;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#tacoSelection .cardDescription {
+  font-size: 2.2em;
+  padding: .2em 0;
+  color: #494313;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#tacoSelection .cardCategory {
+  font-size: 2.4em;
+  margin-bottom: .5em;
+  padding: .2em 0;
+  color: #347707;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#newTacos #localStorageTacos article {
+  margin: 3em 3.8em 0 3.8em;
+  padding: 0 1.4em;
+  border: solid black .1em;
+  border-radius: 2em;
+  background: #e8f3fb;
+}
+
+#newTacos #localStorageTacos article h4 {
+  font-size: 2.8em;
+  padding: .2em 0;
+  color: #e42c2c;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#newTacos #localStorageTacos article p:first-of-type {
+  font-size: 2.2em;
+  padding: .2em 0;
+  color: #494313;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#newTacos #localStorageTacos article p:last-of-type {
+  font-size: 2.4em;
+  margin-bottom: .5em;
+  padding: .2em 0;
+  color: #347707;
+  text-shadow: 0.05em 0.05em 0.07em grey;
+}
+
+#newTacos #localStorageTacos article span {
+  margin: .8em .8em 0 0;
+  float: right;
+}
+
+.padding {
+  padding: 2em;
+}
+/*# sourceMappingURL=main.css.map */

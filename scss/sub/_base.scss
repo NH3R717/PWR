@@ -1,0 +1,157 @@
+                //base CSS
+                h1,
+                h2 {
+                    display: none;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                input,
+                button,
+                p {
+                    font-family: "Pacifico";
+                }
+                
+                //HEADER
+                header {
+                    background-color: black;
+                    border-bottom: solid .2em $fieldRed;
+                    #funkyImageContainer {
+                        img {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            max-height: 50em;
+                            max-width: 50em;
+                            padding-top: 8%;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    #recipeFormContainer {
+                        display: flex;
+                        justify-content: center;
+                        form {
+                            margin: 6em 4em 5em 4em;
+                            padding: 1.4em;
+                            display: grid;
+                            height: 40em;
+                            background: radial-gradient(black 3px, transparent 4px), radial-gradient(black 3px, transparent 4px), linear-gradient($backgroundBlue 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px), $backgroundBlue;
+                            background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+                            background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+                            border-radius: 2em;
+                            h3 {
+                                font-size: 2.8em;
+                                margin-bottom: .8em;
+                                color: $fieldRed;
+                                text-shadow: $dropShadow;
+                            }
+                            input {
+                                width: 90%;
+                                height: 1.6em;
+                                padding: .75em;
+                                margin: .3em 0 1.2em 0;
+                                border: none;
+                                background: $fieldRed;
+                                color: $taskParagraphFontColor;
+                                box-shadow: $dropShadow;
+                                text-shadow: $dropShadow;
+                                border-radius: .5em;
+                                font-size: 1.8em;
+                                text-shadow: $dropShadow;
+                            }
+                            button {
+                                font-size: 1.8em;
+                                margin: .8em 0 .8em .5em;
+                                border-radius: .5em;
+                                text-shadow: $dropShadow;
+                                background-color: $buttonYellow;
+                                color: $textBlue
+                            }
+                        }
+                    }
+                }
+                
+                // TOP TACOS
+                .backgroundOverlay {
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+                
+                #tacoSelection {
+                    background-image: url("/assets/resized/brick.jpg");
+                    background-size: 220px 220px;
+                    background-repeat: repeat;
+                    .topTacoCard {
+                        margin: 3em 3.8em;
+                        border: solid black .1em;
+                        border-radius: 2em;
+                        background: $backgroundBlue;
+                    }
+                    h3 {
+                        font-size: 3.2em;
+                        text-decoration: underline;
+                        // margin-bottom: .8em;
+                        padding: 1em 1em 0 1em;
+                        color: $fieldRed;
+                        text-shadow: $dropShadow;
+                    }
+                    img {
+                        width: 100%;
+                        transform: scale(.9, .9);
+                        padding-top: .3em;
+                        // margin-left: auto;
+                        // margin-right: auto;
+                        border-radius: 2em;
+                        box-shadow: 0.15em 0.15em 0.07em gray;
+                    }
+                    #fakeTacoImg {
+                        box-shadow: none;
+                    }
+                    .tacoText {
+                        padding: 0 1.4em
+                    }
+                    .cardName {
+                        @include typographyName;
+                    }
+                    .cardDescription {
+                        @include typographyDescription;
+                    }
+                    .cardCategory {
+                        @include typographyCategory;
+                    }
+                }
+                
+                // NEW TACOS
+                #newTacos {
+                    #localStorageTacos {
+                        article {
+                            margin: 3em 3.8em 0 3.8em;
+                            padding: 0 1.4em;
+                            border: solid black .1em;
+                            border-radius: 2em;
+                            background: $backgroundBlue;
+                            // font-size: 4em;
+                            h4 {
+                                @include typographyName;
+                            }
+                            p:first-of-type {
+                                @include typographyDescription;
+                            }
+                            p:last-of-type {
+                                @include typographyCategory;
+                            }
+                            span {
+                                margin: .8em .8em 0 0;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                
+                .padding {
+                    padding: 2em;
+                }

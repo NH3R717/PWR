@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- /* 
+    • Umholtz, Tommy
+    • Full Sail University
+    • Web Design and Development, Bachelors of Science – Online
+    • Programming for Web Applications (PWA)
+    */ -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taco Town</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="node_modules/noty/lib/noty.js"></script>
+    <link href="node_modules/noty/lib/noty.css" rel="stylesheet">
+    <!-- <script src="lib/noty.js" type="text/javascript"></script> -->
+
+</head>
+
+<body>
+    <main>
+
+        <header>
+            <h1>Taco Town</h1>
+
+            <section id="funkyImageContainer">
+                <h3>Funky Taco</h3>
+                <img src="./assets/resized/funky_sign_hero.jpg" alt="The Funky Taco">
+            </section>
+
+            <section id="recipeFormContainer">
+                <form class="container" method="post">
+                    <h3>Tacos Go Here!</h3>
+                    <div id="textFields">
+
+                        <label id="name" class="addTacoLabel" for="recName"></label>
+                        <input type="text" class="addForm" id='recName' placeholder="Recipe Name" required />
+
+                        <label id="description" class="addTacoLabel" for="recDesc"></label>
+                        <input type="text" class="addForm" id="recDesc" placeholder="Description" required />
+
+                        <label id="category" class="addTacoLabel" for="recCat"></label>
+                        <input type="text" class="addForm" id="recCat" placeholder="Category" required />
+
+                    </div>
+                    <div id="addBtn">
+                        <button type="button">Add Taco</button>
+                    </div>
+                </form>
+            </section>
+
+        </header>
+
+        <div id="bricks">
+            <div class="backgroundOverlay">
+
+                <article id="tacoSelection">
+                    <div class="backgroundOverlay">
+                        <h2>All Tacos</h2>
+
+                        <section id="topTacos">
+                            <h3>Top Tacos</h3>
+                            <div class="4_col">
+
+                                <div class="2_col">
+
+                                    <section class="topTacoCard">
+                                        <h2>Street Taco</h2>
+                                        <img src="assets/resized/street_taco.jpg" alt="street taco">
+                                        <div class="tacoText">
+                                            <p class="cardName">Street Taco</p>
+                                            <p class="cardDescription">Low cost, fresh and tasty – street tacos can be a great lunch when you are on the go.</p>
+                                            <p class="cardCategory">Street</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="topTacoCard">
+                                        <h2>Luxury Taco</h2>
+                                        <img src="assets/resized/luxury_taco.jpg" alt="luxury taco">
+                                        <div class="tacoText">
+                                            <p class="cardName">Luxury Taco</p>
+                                            <p class="cardDescription">It's date night what do you do? Go for a luxury taco when you want to make an impression.</p>
+                                            <p class="cardCategory">Luxury</p>
+                                        </div>
+                                    </section>
+
+                                </div>
+
+                                <div class="2_col">
+
+                                    <section class="topTacoCard">
+                                        <h2>House Taco</h2>
+                                        <img src="assets/resized/house_taco.jpg" alt="house taco">
+                                        <div class="tacoText">
+                                            <p class="cardName">Home Taco</p>
+                                            <p class="cardDescription">Tacos are made in homes all around the world. The home taco, just like mom use to make.</p>
+                                            <p class="cardCategory">Home</p>
+                                        </div>
+                                    </section>
+
+                                    <section class="topTacoCard">
+                                        <h2>Fake Taco</h2>
+                                        <img id="fakeTacoImg" src="assets/resized/fake_taco.png" alt="fake taco">
+                                        <div class="tacoText">
+                                            <p class="cardName">Fake Taco</p>
+                                            <p class="cardDescription">It's not a real taco, but even a fake one can remind you of deliciouness. Get a real taco.</p>
+                                            <p class="cardCategory">Fake</p>
+                                        </div>
+                                    </section>
+
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section id="newTacos">
+                            <h3>New Tacos</h3>
+                            <section id="localStorageTacos">
+                                <H2>Added Taco List</H2>
+                            </section>
+                            <div class="padding"></div>
+                        </section>
+
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

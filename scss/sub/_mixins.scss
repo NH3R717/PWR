@@ -1,0 +1,30 @@
+// mixins
+//
+@mixin cardStyle {
+    margin: 3em 3.8em;
+    border: solid black .1em;
+    border-radius: 2em;
+    background: $backgroundBlue;
+}
+
+@mixin typographyName {
+    font-size: 2.8em;
+    padding: .2em 0;
+    color: $fieldRed;
+    text-shadow: $dropShadow;
+}
+
+@mixin typographyDescription {
+    font-size: 2.2em;
+    padding: .2em 0;
+    color: $taskParagraphFontColor;
+    text-shadow: $dropShadow;
+}
+
+@mixin typographyCategory {
+    font-size: 2.4em;
+    margin-bottom: .5em;
+    padding: .2em 0;
+    color: $categoryGreen;
+    text-shadow: $dropShadow;
+}
