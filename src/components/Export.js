@@ -7,6 +7,8 @@ export default class ExportComponent extends Component {
         return (
             <div>
                 <h1>Export</h1>
+                <p>This is an example of using the Export class.</p>
+                <button onClick={alert('Say Hello! (keeping it simple)')}>Export Button</button>
             </div> 
          );
     }

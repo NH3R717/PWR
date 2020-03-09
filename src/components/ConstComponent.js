@@ -1,17 +1,11 @@
-// You did not use a Component module here...
-//import React, { Component } from 'react';
 import React from 'react';
-// For dummy components – does not interact with the state.
-//Spacing is off
+// For dummy components – does not interact with the state. Used primarily for changes to the user interface.
 const ConstComponent = props => {
     return (
          <form style={styles.formCont} onSubmit={props.addName}>
-              <p>Current Student: {props.displayName}</p>
+              <p>Enter Text: {props.displayName}</p>
               <input style={styles.input}
-                           value={props.currentName}
-                           onChange={props.changeName}
-                           name="mName"
-                           placeholder="Name..." />
+                           placeholder="Some Text" />
          </form>
     )
 }
