@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-
+// You did not use a Component module here...
+//import React, { Component } from 'react';
+import React from 'react';
 // For dummy components – does not interact with the state.
-
+//Spacing is off
 const ConstComponent = props => {
     return (
          <form style={styles.formCont} onSubmit={props.addName}>
@@ -15,3 +16,9 @@ const ConstComponent = props => {
     )
 }
 export default ConstComponent;
+
+const styles = {
+     formCont: {
+          
+     }
+}
