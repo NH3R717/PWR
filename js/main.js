@@ -7,7 +7,6 @@
    */
 
 //add taco button even click listener
-
 document.querySelector("#addBtn").addEventListener("click", function() { submitForm(); });
 
 //array to hold local storage data
@@ -102,53 +101,7 @@ function deleteTaco(entry) {
     localStorage.setItem('keyTaco', JSON.stringify(list));
 }
 
-// Noty Plugin
-
-// new Noty({
-//     text: 'NOTY - a dependency-free notification library!',
-//     animation: {
-//         open: 'animated bounceInRight', // Animate.css class names
-//         close: 'animated bounceOutRight' // Animate.css class names
-//     }
-// }).show();
-
-
-// new Noty({
-//     text: "Notification text"
-// }).show();
-
-// window.onload = function() {
-//     $('#funkyImageContainer').noty({ text: 'NOTY - a jquery notification library!' }).show();
-
-//     $(entry).parents('#localStorageTacos article').remove();
-// };
-
-// $('#addBtn').on('click', function (e) {
-//    var n = $('.custom-container').noty({ text: 'NOTY - a jquery notification library!' });
-// }
-
-//   window.onload = $('.custom-container').noty({ text: 'NOTY - a jquery notification library!' });
-
-// window.onload = function() {
-//     $('.custom-container').noty({ text: 'NOTY - a jquery notification library!' });
-//     // this.alert("let's go!");
-// };
-
-// document.querySelector("#addBtn").addEventListener("click", function() { submitForm(); });
-
-
-
-// addNotification = () => {
-//     new Noty({
-//         theme: 'relax',
-//         text: 'New Taco was added to your list!',
-//         animation: {
-//             open: 'animated bounceInRight', // Animate.css class names
-//             close: 'animated bounceOutRight' // Animate.css class names
-//         }
-//     }).show();    
-// }
-
+//noty Plugin
 addTacoNotification = () => {
     console.log("Taco added!")
     new Noty({
