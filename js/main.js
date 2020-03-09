@@ -103,13 +103,13 @@ function deleteTaco(entry) {
 
 // Noty Plugin
 
-new Noty({
-    text: 'NOTY - a dependency-free notification library!',
-    animation: {
-        open: 'animated bounceInRight', // Animate.css class names
-        close: 'animated bounceOutRight' // Animate.css class names
-    }
-}).show();
+// new Noty({
+//     text: 'NOTY - a dependency-free notification library!',
+//     animation: {
+//         open: 'animated bounceInRight', // Animate.css class names
+//         close: 'animated bounceOutRight' // Animate.css class names
+//     }
+// }).show();
 
 
 // new Noty({
@@ -142,3 +142,13 @@ new Noty({
 //         close: 'animated bounceOutRight' // Animate.css class names
 //     }
 // }).show();
+
+
+showNotification = () => {
+    console.log("button")
+    new Noty({
+        theme: 'relax',
+        type: 'success',
+        text: 'My noty',
+    }).show();
+}

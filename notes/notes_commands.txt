@@ -58,3 +58,19 @@ git stash apply – after you go to the new dir you can add these changes
 • files not recognized by .gitignore
 git rm -r --cached node_modules
 git commit -m "removing node_modules"
+
+
+git push --set-upstream origin
+
+npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
