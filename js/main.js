@@ -31,7 +31,7 @@ window.onload = function() {
             item.desc +
             "</p><p>" +
             item.cat +
-            "<span class='gg-trash' onclick='deleteTaco(this);'></span>" +
+            "<span class='gg-trash' onclick='deleteTaco(this); deleteTacoNotification();'></span>" +
             "</p></article>"
         );
     });
@@ -54,7 +54,7 @@ function localStorageTacos() {
         $("#recDesc").val() +
         "</p><p>" +
         $("#recCat").val() +
-        "<span id='trash' class='gg-trash' onclick='deleteTaco(this);'></span>" +
+        "<span id='trash' class='gg-trash' onclick='deleteTaco(this); deleteTacoNotification();'></span>" +
         "</p></article>"
     );
 
@@ -81,6 +81,7 @@ function submitForm() {
     } else {
         localStorageTacos();
         clearForm();
+        addTacoNotification();
     }
 }
 
@@ -135,20 +136,33 @@ function deleteTaco(entry) {
 
 // document.querySelector("#addBtn").addEventListener("click", function() { submitForm(); });
 
-// new Noty({
-//     text: 'NOTY - a dependency-free notification library!',
-//     animation: {
-//         open: 'animated bounceInRight', // Animate.css class names
-//         close: 'animated bounceOutRight' // Animate.css class names
-//     }
-// }).show();
 
 
-showNotification = () => {
+// addNotification = () => {
+//     new Noty({
+//         theme: 'relax',
+//         text: 'New Taco was added to your list!',
+//         animation: {
+//             open: 'animated bounceInRight', // Animate.css class names
+//             close: 'animated bounceOutRight' // Animate.css class names
+//         }
+//     }).show();    
+// }
+
+addTacoNotification = () => {
+    console.log("Taco added!")
+    new Noty({
+        theme: 'relax',
+        type: 'success',
+        text: 'Taco Added!',
+    }).show();
+}
+
+deleteTacoNotification = () => {
     console.log("button")
     new Noty({
         theme: 'relax',
         type: 'success',
-        text: 'My noty',
+        text: 'Taco Deleted!',
     }).show();
 }
