@@ -10,6 +10,6 @@ export default class ExportComponent extends Component {
                 <p>This is an example of using the Export class.</p>
                 <button onClick={alert('Say Hello! (keeping it simple)')}>Export Button</button>
             </div> 
-         );
+        );
     }
 };

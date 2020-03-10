@@ -3,7 +3,9 @@ import './App.css';
 import Exports from './components/Export'
 import Classes from './components/Class'
 import Consts from './components/ConstComponent'
+//Fix your syntax
 
+//I deleted the logo.svg file.
 class App extends Component {
   render() {
     return (
@@ -11,8 +13,8 @@ class App extends Component {
         <Exports />
         <Classes />
         <Consts />
-        </div>
-  );
+      </div>
+    );
   }
 }
 export default App;
