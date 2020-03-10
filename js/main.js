@@ -7,6 +7,7 @@
    */
 
 //add taco button even click listener
+//This can be written in jQuery. You are switching between jQuery and vanilla JS
 document.querySelector("#addBtn").addEventListener("click", function() { submitForm(); });
 
 //array to hold local storage data
@@ -22,6 +23,7 @@ window.onload = function() {
     let data = JSON.parse(this.localStorage.getItem('keyTaco'));
     //loop through each item within my storage (using jQuery)
     $.each(data, function(i, item) {
+        //You can use template literals here. It is a new ES6 method.
         $("#localStorageTacos").append("<article id=" +
             item.id +
             "><h4>" +
@@ -47,6 +49,7 @@ function localStorageTacos() {
     }
 
     // add taco to page section "New Tacos"
+    //You can use a template literal here also.
     $("#localStorageTacos").append("<article id=" + arrayLength + "><h4>" +
         $("#recName").val() +
         "</h4><p>" +
@@ -85,6 +88,7 @@ function submitForm() {
 }
 
 //clear form after submitting values
+//If the value is in the form you can use e.target.reset() to reset the form.
 function clearForm() {
     $("#recName").val("");
     $("#recDesc").val("");
@@ -100,7 +104,7 @@ function deleteTaco(entry) {
     list.splice(removedItem, 1);
     localStorage.setItem('keyTaco', JSON.stringify(list));
 }
-
+//When I add a taco I do not see the notification. You would have to add this to the add function
 //noty Plugin
 addTacoNotification = () => {
     console.log("Taco added!")
@@ -110,7 +114,7 @@ addTacoNotification = () => {
         text: 'Taco Added!',
     }).show();
 }
-
+//When I delete the taco I can not see the notification. You would have to add this to the delete function.
 deleteTacoNotification = () => {
     console.log("button")
     new Noty({
