@@ -12,7 +12,7 @@ import ListItem from './components/listItem/ListItem'
 
 
 // Images
-import wizzlet_jr from './images/wizzlet_jr.jpg'
+import Wizzlet_jr from './images/wizzlet_jr.jpg'
 
 
 
@@ -54,7 +54,7 @@ class App extends Component {
   
   // Map holds key value pairs
   // array.map(function(currentValue, index, argument), thisValue)
-
+  //It is returning the li. But it is not grabing the data.  You can figure this out.
       return <ListItem key={i} val={element} />
     })
     // this showing a parsing error:unexpected token (matches the video)?
@@ -77,14 +77,13 @@ class App extends Component {
           </div>
         {myList}
         <p>This is text for the app.</p>
-        <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+        <img src={Wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
         {/* <h3> Lets go for a <FaBeer />? </h3> */}
   
 
           </main>
         {/* <Nav container /> */}
           <Footer />
-         
       </div>
 
     )
@@ -101,5 +100,3 @@ const styles= {
     margin: '2em'
   }
 }
-
-// 

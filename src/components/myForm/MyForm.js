@@ -1,5 +1,5 @@
 import React from 'react'
-// import MyBtn from './components/buttons/MyBtn'
+import MyBtn from '../buttons/MyBtn'
 
 const Myform = props => {
 
@@ -16,7 +16,7 @@ const Myform = props => {
                 placeholder="Name" />
             <p>New Item: {props.myImput}</p>
             {/* doesnt work with MyBtn uncomment */}
-            {/* <MyBtn btnText='Add' /> */}
+            <MyBtn btnText='Add' />
 
         </form>
     )

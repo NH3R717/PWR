@@ -2,22 +2,21 @@
 
 import React from 'react'
 import Nav from '../nav/Nav'
-// import wizzlet_jr from './images/wizzlet_jr.jpg'
+//Your file location was wrong from this file. 
+import wizzlet_jr from '../../images/wizzlet_jr.jpg'
 
 // dummy component
 // not using state allowing uses of variable
 // component declarations are capitalized
 
 const Header = props => {
-
     return (
         <header style={styles.header}>
             <h1 styles={styles.h1}>{props.pgTitle}</h1>
             <Nav />
-            {/* <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} /> */}
-            </header>
+            <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+        </header>
     )
-    
 }
 export default Header
 
