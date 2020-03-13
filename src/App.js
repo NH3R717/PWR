@@ -1,27 +1,90 @@
 import React, { Component } from 'react'
 // import React from 'react';
-// import logo from './logo.svg';
+
+// Files
 import './App.css';
 import Header from './components/header/Header'
+// import Nav from './components/nav/Nav'
+import Search from './components/search/Search.js'
+import MyForm from './components/myForm/MyForm.js'
 import Footer from './components/footer/Footer'
-import Nav from './components/nav/Nav'
+import ListItem from './components/listItem/ListItem'
+
+
+// Images
 import wizzlet_jr from './images/wizzlet_jr.jpg'
 
 
 
 class App extends Component {
 
+  state = {
+    myInput: '',
+    gList: [{
+      gName: 'Tofu',
+      gPrice: ' $2.20'
+    },
+    {
+      gName: 'Ice Cream',
+      gPrice: ' $5.55'
+    }]
+  }
+  
+  changeMeMan = e => {
+    this.setState({ myInput: e.target.value})
+  }
+
+  addName = e => {
+    e.preventDefault()
+  // replace the following 2 lines of code with a spread operator
+  this.state.gList.push({gName:this.state.myImput})
+  this.setState({ gList:this.state.gList })
+  e.target.reset()
+  }
+
+  removeName = key => {
+    // check out splice method
+    this.state.gList.splice(key, 1)
+    this.setState({gList:this.state.gList})
+  }
+
   render() {
+
+    let myList = this.state.gList.map((element, i) => {
+  
+  // Map holds key value pairs
+  // array.map(function(currentValue, index, argument), thisValue)
+
+      return <ListItem key={i} val={element} />
+    })
+    // this showing a parsing error:unexpected token (matches the video)?
+    // return <ListItem key={i} val={element} delMe={()
+    //   =>this.removeName(i)} /> 
+    
     return (
       
-      <div style={StyleSheet.container}>
+      <div style={styles.container}>
         <Header pgTitle='Week 2 React Social Media App' />
+        <main>
+        <div>           
+            <Search searchMe={this.search} />
+            {/* <MyForm addName={this.addName} /> */}
+            <MyForm
+              changeMeMan={this.changeMeMan}
+              myImput={this.state.myInput}
+              addName={this.addName}
+            />
+          </div>
+        {myList}
         <p>This is text for the app.</p>
-        <p>
-          <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr}/>
-        </p>
-        <Nav container />
-        <Footer />
+        <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+        {/* <h3> Lets go for a <FaBeer />? </h3> */}
+  
+
+          </main>
+        {/* <Nav container /> */}
+          <Footer />
+         
       </div>
 
     )

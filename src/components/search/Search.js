@@ -1,32 +1,25 @@
 import React from 'react'
-// import MyBtn from './components/buttons/MyBtn'
+// import MyBtn from './components/buttons/MyBtn.js'
 
-const Myform = props => {
+const Search = props => {
 
     return (
         <form
             
-            style={styles.myForms}
-            onSubmit={props.addName}>
-            <input type='text'               
+            style={styles.searchForm}>
+            <input
                 style={styles.input}
-                name="gName"
-                value={props.gName}
-                onChange={props.changeMeMan}
-                placeholder="Name" />
-            <p>New Item: {props.myImput}</p>
+                placeholder="Search..." />
             {/* doesnt work with MyBtn uncomment */}
-            {/* <MyBtn btnText='Add' /> */}
-
+            {/* <MyBtn btnText='Search' /> */}
         </form>
     )
-
 }
 
-export default Myform
+export default Search
 
-const styles= {
-    myForm: {
+const styles = {
+    searchForm: {
        
     },
     input: {

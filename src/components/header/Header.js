@@ -14,7 +14,7 @@ const Header = props => {
         <header style={styles.header}>
             <h1 styles={styles.h1}>{props.pgTitle}</h1>
             <Nav />
-            {/* <img src={wizzlet_jr} alt="dog" style={StyleSheet.wizzlet_jr}/> */}
+            {/* <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} /> */}
             </header>
     )
     

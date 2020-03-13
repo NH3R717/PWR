@@ -23,18 +23,3 @@ const styles= {
         borderRadius: '1em'
     }
 }
-
-// smart component (class method)
-
-// class Button extends Component {
-//     render() {
-//         return (
-//             <button style={StyleSheet.button}>
-//                 <h2 style={StyleSheet.h2}>{this.props.btnText}</h2>
-//             </button>
-
-//         )
-
-//     }
-
-// }
