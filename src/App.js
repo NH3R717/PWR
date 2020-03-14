@@ -15,12 +15,16 @@ class App extends Component {
 
   state = {
     myInput: '',
+    //Change so you know which list it is.
     gList: [{
       postTitle: 'Another Taco ',
+      //That's funny.
       postDescription: 'Tacos and a Corrona (the good kind)'
-    }]
+    }],
+    ads: 'Add your ads here'
   }
   // for live update
+  //Use your own descriptive names
   changeMeMan = e => {
     this.setState({myInput: e.target.value})
   }
@@ -43,48 +47,32 @@ class App extends Component {
   }
 
   render() {
-
     let myList = this.state.gList.map((element, i) => {
       // return <ListItem key={i} val={element} />
       // below code still broken
-      return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />
-    
-    })
-      
-      return (
-      
+      return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />  
+    })     
+      return (   
         <div style={styles.container}>
-
-          <header>
-            <Header />
+          <Header />
             {/* <Header pgTitle='"Search"' /> */}
             {/* <Search searchMe={this.search} /> */}
-            </header>
           <main style={styles.main}>
-
-            <nav>
             <Nav style={styles.mainNav} />
-            </nav>
-
             <section style={styles.addPostCard}>
-            <MyForm style={styles.mainForm}
-                changeMeMan={this.changeMeMan}
-                myInput={this.state.myInput}
-                addName={this.addName} />
-             <p>{myList}</p>
+              <MyForm style={styles.mainForm}
+                  changeMeMan={this.changeMeMan}
+                  myInput={this.state.myInput}
+                  addName={this.addName} />
+                <ul>{myList}</ul>
             </section>
-
             <aside>
-            <Ad />
+              {/* Loop through the ad object in the state */}
+              <Ad />
             </aside>
-
           </main>
-          <footer>
           <Footer />
-          </footer>
-
         </div>
-
       )
     }
   }
@@ -123,6 +111,7 @@ const styles= {
   },
 }
 
+// I just saw this. You can place this on the index.css unless you like it here.
 // Coolers.co color profile – https://coolors.co/151e3f-030027-336699-fcdebe-db2b39
 
 // rgba(21, 30, 63, 1),  – Yankees Blue

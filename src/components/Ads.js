@@ -5,21 +5,19 @@ import React from 'react'
 // dummy component
 // component declarations are capitalized
 
-const Ads = () => {
-
+const Ads = props => {
     return (
-        <aside style={styles.aside}>
-
-<p style={styles.adBox}>Advert #1</p>
-<p style={styles.adBox}>Advert #2</p>
-            </aside>
+        <div style={styles.aside}>
+            {/* This should just be one ad place older. Example: */}
+            <p style={styles.adBox}>Advert Image or/and title{props.adImg}{props.adTitle}</p>
+        </div>
     )
     
 }
 export default Ads
 
+//You will want to style this just for the ad. I would style the aside on the app.js page
 const styles = {
-    
     aside: {
         display: 'flex',
         flexDirection: 'column',
@@ -30,7 +28,7 @@ const styles = {
         flexDirection: 'column',
         listStyleType: 'none',
         width: '9em',
-        height: '20em',
+        height: '15em',
         textAlign: 'center',
         backgroundColor: 'dimGrey'
         // contentJusitfy: 'center'

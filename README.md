@@ -1,10 +1,10 @@
-/* 
-   • Umholtz, Tommy
-   • Full Sail University
-   • Web Design and Development, Bachelors of Science – Online
-   • Programming for Web Applications (PWA)
-   
-   */
+# PRW - Programming for Web Applications (PRW)
+• Umholtz, Tommy
+• Full Sail University
+• Web Design and Development, Bachelors of Science – Online
+
+### Application name and description. 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
