@@ -1,7 +1,7 @@
 // not using 'state' in header – using variable
 
 import React from 'react'
-// import Search from '../../components/search/Search.js'
+import Search from '../../components/Search.js'
 
 //Your file location was wrong from this file. 
 import wizzlet_jr from '../../images/wizzlet_jr.jpg'
@@ -19,7 +19,8 @@ const Header = props => {
             <div>
                 <img src={s_cafe} alt="logo" style={styles.s_cafe} />
             </div>
-             {/* <Search searchMe={this.search} /> */}
+            {/* <Search searchMe={this.search} /> */}
+            <Search />
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <div style={styles.headerRight}>
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />

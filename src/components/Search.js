@@ -1,11 +1,12 @@
 import React from 'react'
-// import MyBtn from '../buttons/MyBtn'
+// import MyBtn from '../components/MyBtn.js'
 
 const Search = props => {
 
     return (
         <form
-            style={styles.searchForm}>
+            style={styles.searchForm}
+            onSubmit={props.searchMe}>
             <input
                 style={styles.input}
                 placeholder="Search..." />

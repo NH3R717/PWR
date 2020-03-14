@@ -45,39 +45,44 @@ class App extends Component {
   render() {
 
     let myList = this.state.gList.map((element, i) => {
-  
-      return <ListItem key={i} val={element} />
+      // return <ListItem key={i} val={element} />
       // below code still broken
-      // return <ListItem key={i} val={element} delMe={()
-      //   => this.removeName(i)} />
+      return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />
     
     })
       
       return (
       
         <div style={styles.container}>
+
           <header>
-            {/* <Header /> */}
-            <Header pgTitle='"Search"' />
+            <Header />
+            {/* <Header pgTitle='"Search"' /> */}
             {/* <Search searchMe={this.search} /> */}
             </header>
           <main style={styles.main}>
-            {/* <Nav style={styles.mainNav} container /> */}
+
+            <nav>
             <Nav style={styles.mainNav} />
+            </nav>
+
             <section style={styles.addPostCard}>
             <MyForm style={styles.mainForm}
                 changeMeMan={this.changeMeMan}
                 myInput={this.state.myInput}
-                addName={this.addName}
-              />
-              
+                addName={this.addName} />
              <p>{myList}</p>
             </section>
+
             <aside>
             <Ad />
             </aside>
+
           </main>
+          <footer>
           <Footer />
+          </footer>
+
         </div>
 
       )
