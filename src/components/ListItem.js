@@ -3,11 +3,11 @@ import React from 'react'
 const ListItem = props => {
 
     return (
-        <li key={props.id} style={styles.list}>
-            <span>{props.val.gName}</span> 
-            <span>{props.val.gPrice}</span>
+        <ul key={props.id} style={styles.list}>
+            <li>{props.val.postTitle}</li> 
+            <li>{props.val.postDescription}</li>
             <button onClick={props.delMe}>Delete</button>
-    </li>
+        </ul>      
 )
 
 }

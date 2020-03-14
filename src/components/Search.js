@@ -1,11 +1,10 @@
 import React from 'react'
-// import MyBtn from './components/buttons/MyBtn.js'
+// import MyBtn from '../buttons/MyBtn'
 
 const Search = props => {
 
     return (
         <form
-            
             style={styles.searchForm}>
             <input
                 style={styles.input}

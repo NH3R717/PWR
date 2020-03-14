@@ -21,9 +21,9 @@ const styles = {
     
     footer: {
         display: 'flex',
-        flexDirection: 'row',
-        fontSize: '0.65em',
-        padding: '0',
+        // flexDirection: 'row',
+        fontSize: '0.85em',
+        paddingRight: '3em',
         justifyContent: 'right'
     }
 

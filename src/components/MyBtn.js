@@ -20,6 +20,10 @@ const styles= {
         fontSize: '1.25em',
         fontWeight: 'normal',
         cursor: 'pointer',
-        borderRadius: '1em'
+        borderRadius: '1em',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // // justifyContent: 'end',
+        // alignItems: 'flexEnd'
     }
 }

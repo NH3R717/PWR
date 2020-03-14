@@ -1,22 +1,22 @@
 import React from 'react'
-import MyBtn from '../buttons/MyBtn'
+import MyBtn from '../../components/MyBtn.js'
 
 const Myform = props => {
 
     return (
-        <form
+        <form style={styles.myForms}
             
-            style={styles.myForms}
             onSubmit={props.addName}>
             <input type='text'               
                 style={styles.input}
-                name="gName"
-                value={props.gName}
+                name="postTitle"
+                // used to get value
+                value={props.postTitle}
                 onChange={props.changeMeMan}
-                placeholder="Name" />
-            <p>New Item: {props.myImput}</p>
-            {/* doesnt work with MyBtn uncomment */}
-            <MyBtn btnText='Add' />
+                placeholder="Create Post" />
+            {/* <p>New Item: {props.myInput}</p> */}
+            
+            <MyBtn style={styles.myBtn} btnText='Post' />
 
         </form>
     )
@@ -27,7 +27,8 @@ export default Myform
 
 const styles= {
     myForm: {
-       
+        display: 'flex',
+        flexDirection: 'row'
     },
     input: {
         margin: '1em',
@@ -39,6 +40,12 @@ const styles= {
         cursor: 'auto',
         borderRadius: '0',
         display: 'flex',
-        flexDirection: 'row'
-    }
+        flexDirection: 'column'
+    },
+    myBtn: {
+        display: 'flex',
+        flexDirection: 'row',
+        // justifyContent: 'end',
+        alignItems: 'flexEnd'
+    },
 }
