@@ -8,10 +8,14 @@ import { TiEdit } from "react-icons/ti";
 //Fix the syntax.
 const ListItem = props => {
     return (
+        //Your root element is already a ul 
+        //Fix this so that the JSX syntax is correct.
         <ul key={props.id} style={styles.listGroup}>
             <div style={styles.avatarTitleButton}>
                 <div style={styles.avatarTitle}> 
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+
+                <img src={props.val.postImage} alt="dog" style={styles.wizzlet_jr} /> 
                 <h3 style={styles.listTitle}>{props.val.postTitle}</h3> 
                 </div>
                 <div>
