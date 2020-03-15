@@ -15,26 +15,30 @@ class App extends Component {
 
   state = {
     myInput: '',
-    //Change so you know which list it is.
-    gList: [{
-      postTitle: 'Another Taco ',
+    postList: [{
+      postTitle: 'Another Taco',
       //That's funny.
-      postDescription: 'Tacos and a Corrona (the good kind)'
+      postDescription: 'Just ate some fresh Tacos — w/ Corona (the good kind).',
+      postImage:'./images/postMain.jpg'
+    // }],
     }],
-    ads: 'Add your ads here'
+    ads: [{
+      ad1: './images/ads/freshApp1.jpg',
+      ad2: './images/ads/freshApp2.jpg',
+      ad3: './images/ads/freshApp3.jpg',
+    }]
   }
-  // for live update
-  //Use your own descriptive names
-  changeMeMan = e => {
+
+  // for live update (may use later)
+  liveUpdate = e => {
     this.setState({myInput: e.target.value})
   }
 
-  
   addName = e => {
     e.preventDefault()
     this.setState({
       // check out spread operator on with React keeping the state un-mutated
-      gList: [...this.state.gList, {postTitle:this.state.myInput}]
+      postList: [...this.state.postList, {postTitle:this.state.myInput, postDescription:this.state.myInput}]
     });
 
   e.target.reset()
@@ -42,31 +46,27 @@ class App extends Component {
 
   removeName = key => {
     // check out splice method
-    this.state.gList.splice(key, 1)
-    this.setState({gList:this.state.gList})
+    this.state.postList.splice(key, 1)
+    this.setState({postList:this.state.postList})
   }
 
   render() {
-    let myList = this.state.gList.map((element, i) => {
-      // return <ListItem key={i} val={element} />
-      // below code still broken
+    let myList = this.state.postList.map((element, i) => {
       return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />  
     })     
       return (   
         <div style={styles.container}>
           <Header />
-            {/* <Header pgTitle='"Search"' /> */}
-            {/* <Search searchMe={this.search} /> */}
           <main style={styles.main}>
             <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
               <MyForm style={styles.mainForm}
-                  changeMeMan={this.changeMeMan}
+                  liveUpdate={this.liveUpdate}
                   myInput={this.state.myInput}
                   addName={this.addName} />
-                <ul>{myList}</ul>
+                <ul style={styles.list}>{myList}</ul>
             </section>
-            <aside>
+            <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
               <Ad />
             </aside>
@@ -98,11 +98,23 @@ const styles= {
   // },
   addPostCard: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    margin: '.5em',
+    padding: '.5em',
+    width: '65%',
+    // background:'rgba(219, 43, 57, .2)'
+  },
+  list: {
+    padding: '0'
   },
   // mainAside: {
   //   width: "20em"
   // },
+  asideAd: {
+    // display: 'flex',
+    // flexDirection: 'column',
+    // width: '65%'
+  },
   wizzlet_jr: {
     // padding removes boarder radius
     // padding: '1em', 
@@ -110,12 +122,3 @@ const styles= {
     margin: '2em'
   },
 }
-
-// I just saw this. You can place this on the index.css unless you like it here.
-// Coolers.co color profile – https://coolors.co/151e3f-030027-336699-fcdebe-db2b39
-
-// rgba(21, 30, 63, 1),  – Yankees Blue
-// rgba(3, 0, 39, 1), – Rich Black (FOGRA29)
-// rgba(51, 102, 153, 1); – Lapis Lazuli
-// rgba(252, 222, 190, 1); – Very Pale Orange
-// rgba(219, 43, 57, 1); – Rusty Red

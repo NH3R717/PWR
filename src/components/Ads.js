@@ -8,6 +8,7 @@ import React from 'react'
 const Ads = props => {
     return (
         <div style={styles.aside}>
+            <h2 style={styles.freshApps}>Fresh Apps</h2>
             {/* This should just be one ad place older. Example: */}
             <p style={styles.adBox}>Advert Image or/and title{props.adImg}{props.adTitle}</p>
         </div>
@@ -23,6 +24,10 @@ const styles = {
         flexDirection: 'column',
         width: '10em'
     },
+    freshApps: {
+        margin: '2em 0 0 .2em',
+        
+    },
     adBox: {
         display: 'flex',
         flexDirection: 'column',
@@ -31,7 +36,6 @@ const styles = {
         height: '15em',
         textAlign: 'center',
         backgroundColor: 'dimGrey'
-        // contentJusitfy: 'center'
     },
 
 }

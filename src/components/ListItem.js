@@ -1,14 +1,26 @@
 import React from 'react'
+import wizzlet_jr from '../images/wizzlet_jr.jpg'
+import { IoMdClose } from 'react-icons/io'
+import { TiEdit } from "react-icons/ti";
 
 
 //This needs to be a list item or a div. You are looping through this. Right now you have it looping a ul list.  So it creates a new ul each time. You only want to loop through the list item.
 //Fix the syntax.
 const ListItem = props => {
     return (
-        <ul key={props.id} style={styles.list}>
-            <li>{props.val.postTitle}</li> 
-            <li>{props.val.postDescription}</li>
-            <button onClick={props.delMe}>Delete</button>
+        <ul key={props.id} style={styles.listGroup}>
+            <div style={styles.avatarTitleButton}>
+                <div style={styles.avatarTitle}> 
+                <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+                <h3 style={styles.listTitle}>{props.val.postTitle}</h3> 
+                </div>
+                <div>
+                <button style={styles.editButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
+                <button style={styles.deleteButton} > <TiEdit size={30} /></button>
+                </div>
+            </div>
+            
+            <p style={styles.listDescription}>{props.val.postDescription}</p>
         </ul>      
 )
 
@@ -17,5 +29,60 @@ const ListItem = props => {
 export default ListItem
 
 const styles = {
+    listGroup: {
+        // listStyle: 'none',
+        padding: '0',
+        backgroundColor: 'rgba(51, 102, 153, .85)',
+        borderRadius: '.6em'
+    },
+    avatarTitleButton: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        margin: 'auto'
+        // textAlign: 'center'
+    },
+    avatarTitle: {
+        display: 'flex',
+        // justifyContent: 'space-between',
+        margin: '.0 0 .6em 1.2em',
+        // textAlign: 'center'
+    },
+    wizzlet_jr: {
+        // padding removes boarder radius
+        // padding: '1em', 
+        borderRadius: '3em',
+        width: '2.5em',
+        height: '2.5em',
+        marginTop: '1.5em'
+    },
+    listTitle: {
+        padding: '0',
+        margin: '1.7em 0 0 .4em',
+        color: 'rgba(3, 0, 39, 1)'
+
+    },
+    listDescription: {
+        // listStyle: 'none',
+        // margin: '1.7em 0 1.5em .4em',
+        padding: '0 0 1.8em 1.8em',
+        color: 'rgba(3, 0, 39, 1)'
+    },
+    editButton: {
+        // listStyle: 'none',
+        border: 'none',
+        background: 'none',
+        
+        margin: '.2em 1.6em 0 0',
+        padding: '2.4em 0em 1.1em 0em',
+        float: 'right'
+    },
+    deleteButton: {
+        // listStyle: 'none',
+        border: 'none',
+        background: 'none',
+        margin: '.2em .2em 0 0',
+        padding: '2.4em 0em 1.1em 0em',
+        float: 'right'
+    }
 
 }

@@ -44,19 +44,20 @@ const styles= {
     h3:{
         fontSize: '1em',
         marginTop: '2em',
-        marginLeft: '1.6em'
+        marginLeft: '.8em',
+        marginRight: '-1em'
     },
     headerRight: {
         display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        // flexDirection: 'row',
+        // justifyContent: 'space-between'
     },
     wizzlet_jr: {
         // padding removes boarder radius
         // padding: '1em', 
         borderRadius: '3em',
-        width: '2.7em',
-        height: '2.7em',
+        width: '3em',
+        height: '3em',
         marginTop: '1.5em'
       },
     s_cafe: {
