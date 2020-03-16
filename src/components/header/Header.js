@@ -28,7 +28,8 @@ const styles= {
     header: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        fontFamily: 'Helvetica Neue'
     },
     h1:{
         fontSize: '1em'
@@ -37,7 +38,8 @@ const styles= {
         fontSize: '1em',
         marginTop: '2em',
         marginLeft: '.8em',
-        marginRight: '-1em'
+        marginRight: '-1em',
+        color: 'rgba(3, 0, 39, 1)'
     },
     headerRight: {
         display: 'flex',

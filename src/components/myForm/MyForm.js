@@ -40,7 +40,8 @@ export default Myform
 const styles= {
     myForm: {
         backgroundColor: 'rgba(51, 102, 153, .85)',
-        borderRadius: '.6em'
+        borderRadius: '.6em',
+        fontFamily: 'Helvetica Neue'
     },
     input: {
         margin: '1em',
@@ -54,9 +55,11 @@ const styles= {
         cursor: 'auto',
         borderRadius: '0',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        fontFamily: 'Helvetica Neue'
     },
     p: {
-        margin: '.5em 0 0 1em'
+        margin: '.5em 0 0 1em',
+        fontFamily: 'Helvetica Neue'
     }
 }

@@ -36,11 +36,7 @@ class App extends Component {
   liveUpdateDescription = e => {
     this.setState({descriptionInput: e.target.value})
   }
-  // liveUpdate = e => {
-  //   //This should get the post title
-  //   this.setState({myInput: e.target.value})
-  // }
-
+  
   addName = e => {
     e.preventDefault()
     if (this.state.postTitle === 'null' || this.state.postTitle === '') {

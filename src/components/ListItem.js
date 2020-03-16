@@ -35,7 +35,8 @@ const styles = {
         listStyle: 'none',
         padding: '0',
         backgroundColor: 'rgba(51, 102, 153, .85)',
-        borderRadius: '.6em'
+        borderRadius: '.6em',
+        fontFamily: 'Helvetica Neue'
     },
     avatarTitleButton: {
         display: 'flex',

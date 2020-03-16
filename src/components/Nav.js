@@ -24,14 +24,16 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         listStyleType: 'none',
-        width: '10em'
+        width: '10em',
+        fontFamily: 'Helvetica Neue'
     },
     h2: {
-        marginLeft: '1.4em'
+        marginLeft: '1.4em',
+        color: 'rgba(3, 0, 39, 1)',
     },
     ul: {
         display: 'flex',
         listStyleType: 'none',
-        flexDirection: 'column'
+        flexDirection: 'column',
     }
 }

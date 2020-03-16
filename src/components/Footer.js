@@ -1,8 +1,5 @@
 import React from 'react'
 
-// dummy component
-// component declarations are capitalized
-
 const Footer = () => {
 
     return (
@@ -26,7 +23,8 @@ const styles = {
         bottom: '0',
         left: '0',
         right: '0',
-        height: '4em'
+        height: '4em',
+        fontFamily: 'Helvetica Neue'
     }
 
 }

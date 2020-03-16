@@ -24,6 +24,7 @@ const styles= {
         fontWeight: 'normal',
         cursor: 'pointer',
         float: 'right',
-        borderRadius: '0em'
+        borderRadius: '0em',
+        fontFamily: 'Helvetica Neue'
     }
 }
