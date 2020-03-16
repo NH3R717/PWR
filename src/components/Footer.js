@@ -1,6 +1,4 @@
 import React from 'react'
-// import './Footer.css'
-// import FAHome from 'react-icons/lib/fa/home'
 
 // dummy component
 // component declarations are capitalized

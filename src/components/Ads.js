@@ -1,16 +1,15 @@
 import React from 'react'
-// import './Footer.css'
-// import FAHome from 'react-icons/lib/fa/home'
-
-// dummy component
-// component declarations are capitalized
 
 const Ads = props => {
     return (
         <div style={styles.aside}>
             <h2 style={styles.freshApps}>Fresh Apps</h2>
             {/* This should just be one ad place older. Example: */}
-            <p style={styles.adBox}>Advert Image or/and title{props.adImg}{props.adTitle}</p>
+            <ul key={props.id} style={styles.adImage}>
+                <img style={styles.adBox} src={props.adImg} alt="advert" />
+                {/* <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} /> */}
+            {/* <p style={styles.adBox}>Advert Image or/and title{props.adImg}{props.adTitle}</p> */}
+            </ul>
         </div>
     )
     
@@ -26,10 +25,10 @@ const styles = {
     },
     freshApps: {
         margin: '2em 0 0 .2em',
-        
     },
     adBox: {
         display: 'flex',
+        margin: '1em 0 0 0',
         flexDirection: 'column',
         listStyleType: 'none',
         width: '9em',
@@ -37,5 +36,16 @@ const styles = {
         textAlign: 'center',
         backgroundColor: 'dimGrey'
     },
+    adImage: {
+        padding: '0',
+        margin: '0'
+        // display: 'flex',
+        // flexDirection: 'column',
+        // listStyleType: 'none',
+        // width: '9em',
+        // height: '15em',
+        // textAlign: 'center',
+        // backgroundColor: 'dimGrey'
+    }
 
 }

@@ -7,22 +7,29 @@ const Myform = props => {
         <form style={styles.myForm}
             
             onSubmit={props.addName}>
+            
             <input type='text'               
                 style={styles.input}
                 name="postTitle"
                 // used to get value
                 value={props.postTitle}
-                onChange={props.liveUpdate}
+                onChange={props.liveUpdateTitle}
                 placeholder=" Title" />
+            
             <input type='text'               
                 style={styles.input}
                 name="postDescription"
                 // used to get value
                 value={props.postDescription}
-                onChange={props.liveUpdate}
+                onChange={props.liveUpdateDescription}
                 placeholder=" What's good..." />
-            {/* <p>What's on your mind: {props.myInput}</p> */}
+            
+            <p style={styles.p}>Title: {props.titleInput}</p>
+          
+            <p style={styles.p}>Description: {props.descriptionInput}</p>
+        
             <MyBtn style={styles.myBtn} btnText='Post' />
+
         </form>
     )
 
@@ -32,11 +39,8 @@ export default Myform
 
 const styles= {
     myForm: {
-        // display: 'flex',
-        // flexDirection: 'column',
         backgroundColor: 'rgba(51, 102, 153, .85)',
         borderRadius: '.6em'
-        // padding: '1em'
     },
     input: {
         margin: '1em',
@@ -52,12 +56,7 @@ const styles= {
         display: 'flex',
         flexDirection: 'column'
     },
-    myBtn: {
-        // display: 'flex',
-        // flexDirection: 'row',
-        // // justifyContent: 'end',
-        // alignItems: 'flexEnd'
-        // float: 'right'
-        paddingBottom: '1em'
-    },
+    p: {
+        margin: '.5em 0 0 1em'
+    }
 }

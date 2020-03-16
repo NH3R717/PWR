@@ -1,8 +1,4 @@
 import React from 'react'
-// import MyBtn from '../buttons/MyBtn'
-
-// React Icon
-// import { FaBeer } from 'react-icons/fa'
 
 const Nav = () => {
 
@@ -18,11 +14,12 @@ const Nav = () => {
         </nav>
         
     )
+
 }
 
 export default Nav
 
-const styles= {
+const styles = {
     navContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -36,9 +33,5 @@ const styles= {
         display: 'flex',
         listStyleType: 'none',
         flexDirection: 'column'
-        
-    },
-    a: {
-
     }
 }
