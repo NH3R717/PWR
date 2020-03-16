@@ -20,6 +20,7 @@ class App extends Component {
     }],
     ads: [{
       adImg: require('../src/images/ads/freshApp1.jpg'),
+      adTitle: 'Fresh App'
       // { adImg }: require('../src/images/ads/freshApp1.jpg'),
     //   ad2: require('../src/images/ads/freshApp2.jpg'),
     //   ad3: require('../src/images/ads/freshApp3.jpg')
@@ -41,14 +42,15 @@ class App extends Component {
     e.preventDefault()
     if (this.state.postTitle === 'null' || this.state.postTitle === '') {
       alert('Add a title.');
-  } else if (this.state.postDescription === '' || this.state.postDescription === '') {
-      alert('Add a description.');
-  } else {
+    } else if (this.state.postDescription === '' || this.state.postDescription === '') {
+        alert('Add a description.');
+    } else {
     this.setState({
       postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
     });
 
   e.target.reset()
+  //You can empty the liveUpdates here by setting it = ''
   }
   }
   
@@ -75,6 +77,7 @@ class App extends Component {
                 liveUpdateDescription={this.liveUpdateDescription}
                 descriptionInput={this.state.descriptionInput}
                 addName={this.addName} />
+                {/* //You have a ul here so you dont need the ul at the list item. */}
                 <ul style={styles.list}>{myList}</ul>
             </section>
             <aside style={styles.asideAd}>

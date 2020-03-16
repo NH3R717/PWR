@@ -1,5 +1,5 @@
 import React from 'react'
-
+//Remove extra spacing.
 const MyBtn = props => {
     
     return (
