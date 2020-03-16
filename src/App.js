@@ -29,18 +29,11 @@ class App extends Component {
   //This is getting the value for only the first input.
   //Duplicate this function to get the post description
   //Or you you can make it more dynamic and use the value of the name attribute in JSX.
-  // liveUpdateTitle = e => {
-  //   //This should get the post title
-  //   this.setState({myInput: e.target.value})
-  // }
+
   liveUpdateTitle = e => {
-    //This should get the post title
     this.setState({titleInput: e.target.value})
-    // this.setState({titleInput: e.target.value})
   }
   liveUpdateDescription = e => {
-    //This should get the post description
-    // this.setState({titleInput: e.target.value})
     this.setState({descriptionInput: e.target.value})
   }
   // liveUpdate = e => {
@@ -61,9 +54,9 @@ class App extends Component {
 
   e.target.reset()
   }
-}
+  }
+  
   removeName = key => {
-    // check out splice method
     this.state.postList.splice(key, 1)
     //You will want to copy the original array
     this.setState({postList:this.state.postList})
@@ -81,10 +74,11 @@ class App extends Component {
             <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
               <MyForm style={styles.mainForm}
-                  liveUpdateTitle={this.liveUpdateTitle}
-                  liveUpdateDescription={this.liveUpdateDescription}
-                  myInput={this.state.myInput}
-                  addName={this.addName} />
+                liveUpdateTitle={this.liveUpdateTitle}
+                titleInput={this.state.titleInput}
+                liveUpdateDescription={this.liveUpdateDescription}
+                descriptionInput={this.state.descriptionInput}
+                addName={this.addName} />
                 <ul style={styles.list}>{myList}</ul>
             </section>
             <aside style={styles.asideAd}>

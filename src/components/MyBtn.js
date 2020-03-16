@@ -15,7 +15,7 @@ export default MyBtn
 const styles= {
     myBtn: {
         padding: '0',
-        margin: '-.4em 1.4em 1.1em 0',
+        margin: '.5em 1.4em 1.1em 0',
         height: '2.3em',
         width: '5em',
         color: 'rgba(21, 30, 63, 1)',
