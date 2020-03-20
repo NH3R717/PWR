@@ -17,8 +17,8 @@ const ListItem = props => {
                 <span style={styles.listTitle}>{props.val.postTitle}</span> 
                 </div>
                 <div>
-                <button style={styles.editButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
-                <button style={styles.deleteButton} > <TiEdit size={30} /></button>
+                <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
+                <button style={styles.editButton} > <TiEdit size={30} /></button>
                 </div>
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />
@@ -33,6 +33,7 @@ export default ListItem
 const styles = {
     listGroup: {
         listStyle: 'none',
+        margin: '0 0 1em 0',
         padding: '0 1em 2em 1em',
         backgroundColor: 'rgba(51, 102, 153, .85)',
         borderRadius: '.6em',
@@ -70,7 +71,7 @@ const styles = {
         padding: '0',
         color: 'rgba(3, 0, 39, 1)'
     },
-    deleteButton: {
+    editButton: {
         border: 'none',
         color: 'rgba(21, 30, 63, 1)',
         background: 'none',
@@ -78,7 +79,7 @@ const styles = {
         padding: '2.4em 0em 1.1em 0em',
         float: 'right'
     },
-    editButton: {
+   deleteButton: {
         border: 'none',
         color: 'rgba(21, 30, 63, 1)',
         background: 'none',
