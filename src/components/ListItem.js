@@ -10,11 +10,11 @@ const ListItem = props => {
     return (
         //Your root element is already a ul 
         //Fix this so that the JSX syntax is correct.
-        <ul key={props.id} style={styles.listGroup}>
+        <li key={props.id} style={styles.listGroup}>
             <div style={styles.avatarTitleButton}>
                 <div style={styles.avatarTitle}> 
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
-                <h3 style={styles.listTitle}>{props.val.postTitle}</h3> 
+                <span style={styles.listTitle}>{props.val.postTitle}</span> 
                 </div>
                 <div>
                 <button style={styles.editButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
@@ -22,8 +22,8 @@ const ListItem = props => {
                 </div>
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />
-            <p style={styles.listDescription}>{props.val.postDescription}</p>
-        </ul>      
+            <span style={styles.listDescription}>{props.val.postDescription}</span>
+        </li>      
     )
 
 }
@@ -33,7 +33,7 @@ export default ListItem
 const styles = {
     listGroup: {
         listStyle: 'none',
-        padding: '0',
+        padding: '0 1em 2em 1em',
         backgroundColor: 'rgba(51, 102, 153, .85)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'
@@ -41,7 +41,7 @@ const styles = {
     avatarTitleButton: {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: 'auto'
+        margin: '0'
     },
     avatarTitle: {
         display: 'flex',
@@ -66,20 +66,23 @@ const styles = {
         color: 'rgba(3, 0, 39, 1)'
     },
     listDescription: {
-        padding: '0 0 1.8em 1.8em',
+        margin: '0',
+        padding: '0',
         color: 'rgba(3, 0, 39, 1)'
-    },
-    editButton: {
-        border: 'none',
-        background: 'none',
-        margin: '.2em 1.6em 0 0',
-        padding: '2.4em 0em 1.1em 0em',
-        float: 'right'
     },
     deleteButton: {
         border: 'none',
+        color: 'rgba(21, 30, 63, 1)',
         background: 'none',
         margin: '.2em .2em 0 0',
+        padding: '2.4em 0em 1.1em 0em',
+        float: 'right'
+    },
+    editButton: {
+        border: 'none',
+        color: 'rgba(21, 30, 63, 1)',
+        background: 'none',
+        margin: '.2em 1.6em 0 0',
         padding: '2.4em 0em 1.1em 0em',
         float: 'right'
     }

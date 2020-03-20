@@ -1,7 +1,7 @@
 import React from 'react'
-import Search from '../../components/Search.js'
-import wizzlet_jr from '../../images/wizzlet_jr.jpg'
-import s_cafe from '../../images/s_cafe.png'
+import Search from './Search.js'
+import wizzlet_jr from '../images/wizzlet_jr.jpg'
+import s_cafe from '../images/s_cafe.png'
 import { IoIosSettings } from 'react-icons/io'
 
 const Header = props => {
@@ -15,7 +15,7 @@ const Header = props => {
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <div style={styles.headerRight}>
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
-                <h3 style={styles.h3}>Baby Wizzle</h3>
+                <h3 style={styles.h3}>Baby Wizzlet</h3>
                 <span style={styles.icon}> <IoIosSettings size={30} /> </span>
             </div>
         </header>
@@ -39,7 +39,7 @@ const styles= {
         marginTop: '2em',
         marginLeft: '.8em',
         marginRight: '-1em',
-        color: 'rgba(3, 0, 39, 1)'
+        color: 'rgba(21, 30, 63, 1)',
     },
     headerRight: {
         display: 'flex',
@@ -59,6 +59,7 @@ const styles= {
       },
       icon: {
         borderRadius: '15em',
-        margin: '1.7em 1.5em 1.5em 1.5em'
+        margin: '1.7em 1.5em 1.5em 1.5em',
+        color: 'rgba(21, 30, 63, 1)',
       }
 }

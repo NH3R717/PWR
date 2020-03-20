@@ -1,5 +1,6 @@
 import React from 'react'
-import MyBtn from '../../components/MyBtn.js'
+import MyBtn from '../components/MyBtn.js'
+import { TiEdit } from "react-icons/ti";
 
 const Myform = props => {
 
@@ -28,7 +29,10 @@ const Myform = props => {
           
             <p style={styles.p}>Description: {props.descriptionInput}</p>
         
-            <MyBtn style={styles.myBtn} btnText='Post' />
+            <MyBtn style={styles.myBtn}> <TiEdit size={100} /> </MyBtn>
+            {/* <button style={styles.myBtn} > <TiEdit size={30} />
+        {props.btnText}
+        </button> */}
 
         </form>
     )
@@ -43,6 +47,9 @@ const styles= {
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'
     },
+    // myBtn: {
+    //     height: '100px'
+    // },
     input: {
         margin: '1em',
         padding: '0',
@@ -50,10 +57,12 @@ const styles= {
         width: '60%',
         color: 'black',
         backgroundColor: 'rgba(250, 244, 113, 1)',
+        borderStyle: 'solid',
+        borderRadius: '.4em',
+        borderColor: 'rgba(51, 102, 153, 1)',
         fontSize: '1.25em',
         fontWeight: 'normal',
         cursor: 'auto',
-        borderRadius: '0',
         display: 'flex',
         flexDirection: 'column',
         fontFamily: 'Helvetica Neue'

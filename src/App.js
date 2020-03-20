@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './App.css';
-import Header from './components/header/Header'
+import Header from './components/Header'
 import Nav from './components/Nav'
 import Ad from './components/Ads'
-import MyForm from './components/myForm/MyForm.js'
+import MyForm from './components/MyForm.js'
 import Footer from './components/Footer'
 import ListItem from './components/ListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
@@ -26,6 +26,32 @@ class App extends Component {
     }]
   }
 
+  // Wk3 local storage code
+  componentDidMount() {
+
+    if (localStorage.getItem('postList')) {
+
+      let postList = JSON.parse(localStorage.getItem('postList'))
+      this.setState({ postList: postList })
+
+}
+  }
+
+//   componentDidMount() {
+
+//     let postList
+//     if (postList = JSON.parse(localStorage.getItem('postList'))) {
+      
+//       let postList = JSON.parse(localStorage.getItem('postList'))
+
+//       this.setState({ postList })
+//     }
+//       else{
+//       alert('No data to added to local storage')
+      
+// }
+//     }
+      
   //This is getting the value for only the first input.
   //Duplicate this function to get the post description
   //Or you you can make it more dynamic and use the value of the name attribute in JSX.
@@ -44,18 +70,25 @@ class App extends Component {
   } else if (this.state.postDescription === '' || this.state.postDescription === '') {
       alert('Add a description.');
   } else {
+    
     this.setState({
-      postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
+      postList: [...this.state.postList, { postTitle: this.state.titleInput, postDescription: this.state.descriptionInput }]
+      
     });
+      // Wk3 local storage code
+    // localStorage.setItem('postList', JSON.stringify(postList))
+      e.target.reset()
+      
+  //You can empty the liveUpdates here by setting it = ''
 
-  e.target.reset()
   }
   }
   
   removeName = key => {
     this.state.postList.splice(key, 1)
     //You will want to copy the original array
-    this.setState({postList:this.state.postList})
+    this.setState({ postList: this.state.postList })
+    // localStorage.setItem('postList', JSON.stringify(postList))
   }
 
   render() {
@@ -75,6 +108,8 @@ class App extends Component {
                 liveUpdateDescription={this.liveUpdateDescription}
                 descriptionInput={this.state.descriptionInput}
                 addName={this.addName} />
+                {/* //You have a ul here so you don't need the ul at the list item. */}
+
                 <ul style={styles.list}>{myList}</ul>
             </section>
             <aside style={styles.asideAd}>
