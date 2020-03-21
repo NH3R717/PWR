@@ -19,8 +19,8 @@ class App extends Component {
         return (
             <Router>
             <div>
-            <Nav />
-            <Routes />
+              <Routes />
+              <Nav />
             </div>
             </Router>
         );

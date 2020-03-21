@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import './App.css';
 import Header from '../components/header/Header'
 import Search from '../components/Search.js'
-import Nav from '../components/Nav'
+// import Nav from '../components/Nav'
 import Ads from '../components/Ads'
 import MyForm from '../components/myForm/MyForm.js'
 import Footer from '../components/Footer'
@@ -129,7 +129,7 @@ class Newsfeed extends Component {
           <Search searchList={this.searchList}
             placeholder=' Search ...'/>
           <main style={styles.main}>
-            <Nav style={styles.mainNav} />
+            {/* <Nav style={styles.mainNav} /> */}
             <section style={styles.addPostCard}>
               <Profile />
               <MyForm style={styles.mainForm}
