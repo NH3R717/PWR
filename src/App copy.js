@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-// import './App.css';
-import Header from '../components/header/Header'
-import Search from '../components/Search.js'
-import Nav from '../components/Nav'
-import Ads from '../components/Ads'
-import MyForm from '../components/myForm/MyForm.js'
-import Footer from '../components/Footer'
-import Profile from '../components/Profile'
-import ListItem from '../components/ListItem'
-// import adImg from './images/ads/freshApp1.jpg'
+import './App.css';
+import Header from './components/header/Header'
+import Search from './components/Search.js'
+import Nav from './components/Nav'
+import Ad from './components/Ads'
+import MyForm from './components/myForm/MyForm.js'
+import Footer from './components/Footer'
+import Profile from './components/Profile'
+import ListItem from './components/ListItem'
+// import adImg from '../images/ads/freshApp1.jpg'
 
 function searchAlist(search) {
   return function (searchMe) {
@@ -18,7 +18,7 @@ function searchAlist(search) {
   }
 }
 
-class Newsfeed extends Component {
+class App extends Component {
   state = {
     titleInput: '',
     descriptionInput: '',
@@ -26,10 +26,10 @@ class Newsfeed extends Component {
       postTitle: 'Another Taco',
       postDescription: 'Just ate some fresh Tacos — w/ Corona (the good kind).',
       //Added require to get the image
-      postImage: require('../images/postMain.jpg')
+      postImage: require('../src/images/postMain.jpg')
     }],
     ads: [{
-      adImg: require('../images/ads/freshApp1.jpg'),
+      adImg: require('../src/images/ads/freshApp1.jpg'),
       adTitle: 'Fresh App'
       // { adImg }: require('../src/images/ads/freshApp1.jpg'),
     //   ad2: require('../src/images/ads/freshApp2.jpg'),
@@ -143,7 +143,7 @@ class Newsfeed extends Component {
             </section>
             <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
-              <Ads
+              <Ad
               
               />
             </aside>
@@ -154,7 +154,7 @@ class Newsfeed extends Component {
     }
   }
 
-export default Newsfeed
+export default App
 
 const styles= {
   main: {
