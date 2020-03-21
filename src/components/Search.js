@@ -1,17 +1,18 @@
 import React from 'react'
-import { FaSearchDollar } from "react-icons/fa";
+// import { FaSearchDollar } from "react-icons/fa";
 
 const Search = props => {
 
     return (
         <form
-            style={styles.searchForm}
-            onSubmit={props.searchMe}>
-            <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button>
+            style={styles.searchForm}>
+            {/* onSubmit={props.searchMe}>
+            <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button> */}
             <input
                 style={styles.input}
-                type= 'text'
-                placeholder=" Search..." />
+                type='text'
+                onChange={props.searchList}
+                placeholder={props.placeholder} />
         </form>
     )
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from './Search.js'
+// import Search from './Search.js'
 import MyBtn from '../components/MyBtn.js'
 import { TiEdit } from "react-icons/ti";
 
@@ -29,7 +29,7 @@ const Myform = props => {
             <p style={styles.p}>Title: {props.titleInput}</p>
           
             <p style={styles.p}>Description: {props.descriptionInput}</p>
-            <Search />
+            {/* <Search /> */}
             <MyBtn style={styles.myBtn}> <TiEdit size={100} /> </MyBtn>
             {/* <button style={styles.myBtn} > <TiEdit size={30} />
         {props.btnText}

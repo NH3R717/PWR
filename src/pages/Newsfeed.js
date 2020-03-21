@@ -9,12 +9,21 @@ import Nav from '../components/Nav'
 //THIS WAS MISSING THE S
 //import Ad from '../components/Ads'
 import Ads from '../components/Ads'
+import Search from '../components/Search.js'
 import MyForm from '../components/MyForm.js'
 import Footer from '../components/Footer'
 import ListItem from '../components/ListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
 //Add the search function here. Then adjust the loop by adding the filter on line 80 mylist var.
+
+function searchAlist(search) {
+  return function (searchMe) {
+    
+    return searchMe.postTitle.toLowerCase().includes(search.toLowerCase()) || !search
+    
+  }
+}
 
 class Newsfeed extends Component {
   state = {
@@ -39,8 +48,9 @@ class Newsfeed extends Component {
       {
       adImg: require('../images/ads/freshApp3.jpg'),
       adTitle: 'Taco Town'
-      }
-    ]
+      }],
+      search: ''
+    
   }
 
   //localStorage
@@ -106,20 +116,42 @@ removeName = key => {
 }
 
   render() {
+    // for the postList
     let myList = this.state.postList.map((element, i) => {
-      return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />  
-    })    
-    //Add a variable here to map through the ads object.
-
+      return <ListItem
+        key={i}
+        val={element}
+        delMe={() => this.removeName(i)} />  
+      
+    }) 
+    
+    // for the adds
     let myAds = this.state.ads.map((element, i) => {
-      return <Ads key={i} val={element} />
+      return <Ads
+        key={i}
+        val={element} />
+      
     })
+
+    // for the search
+
+    const { search } = this.state
+    myList = this.state.postList.filter(searchAlist(search)).map((element, i) =>  {
+      return <ListItem
+        key={i}
+        val={element}
+        delMe={() =>this.removeName(i)} />
+
+    })
+
       return (   
         <div style={styles.container}>
           <Header />
           <main style={styles.main}>
             <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
+            <Search searchList={this.searchList}
+            placeholder=' Search ...'/>
               <MyForm style={styles.mainForm}
                 liveUpdateTitle={this.liveUpdateTitle}
                 titleInput={this.state.titleInput}
