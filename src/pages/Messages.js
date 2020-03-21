@@ -4,6 +4,11 @@ class Messages extends Component {
     state = {
         //Create an array for 3 messages.
     }
+
+    componentDidMount(){
+    //     Write an if statement here to get the localStorage.
+    }
+
     render() {
         //Loop through the messages array.
         return (       

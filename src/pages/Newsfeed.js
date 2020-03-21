@@ -43,6 +43,11 @@ class Newsfeed extends Component {
     ]
   }
 
+  //localStorage
+  componentDidMount(){
+    // if statement here to get the value of localStorage
+  }
+
   //This is getting the value for only the first input.
   //Duplicate this function to get the post description
   //Or you you can make it more dynamic and use the value of the name attribute in JSX.
@@ -68,12 +73,14 @@ class Newsfeed extends Component {
     this.setState({ descriptionInput: '' })
     e.target.reset()
     //You can empty the liveUpdates here by setting it = ''
+    //Add local storage here
     }
   }
   removeName = key => {
     this.state.postList.splice(key, 1)
     //You will want to copy the original array
     this.setState({postList:this.state.postList})
+    //Add localStorage here.
   }
 
   render() {
