@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 
-
-
 class Messages extends Component {
     render() {
-        return (
-            
+        return (       
             <section className="">
-        <h1>Messages</h1>
+                <h1>Messages</h1>
             </section>
-        
         );
     }
 }

@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 
-
-
 class Profile extends Component {
     render() {
-        return (
-            
+        return (            
             <section className="">
-        <h1>Profile</h1>
+                <h1>Profile</h1>
             </section>
-        
         );
     }
 }

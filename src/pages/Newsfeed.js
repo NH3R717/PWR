@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
-import './App.css';
-// import Header from './components/Header'
-// import Nav from './components/Nav'
-// import Ad from './components/Ads'
-import MyForm from './components/MyForm.js'
-// import Footer from './components/Footer'
-import ListItem from './components/ListItem'
+//Remove if not using.
+//import './App.css';
+//When you move a component the location will change.
+//Where is this file located now?
+//.. means go up a level, then find the components folder. Then the file.
+import Header from '../components/Header'
+import Nav from '../components/Nav'
+import Ad from '../components/Ads'
+import MyForm from '../components/MyForm.js'
+import Footer from '../components/Footer'
+import ListItem from '../components/ListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
 class Newsfeed extends Component {
@@ -16,10 +20,11 @@ class Newsfeed extends Component {
       postTitle: 'Another Taco',
       postDescription: 'Just ate some fresh Tacos — w/ Corona (the good kind).',
       //Added require to get the image
-      postImage: require('../src/images/postMain.jpg')
+      postImage: require('../images/postMain.jpg')
+      //postImage: require('../src/images/postMain.jpg')
     }],
     ads: [{
-      adImg: require('../src/images/ads/freshApp1.jpg'),
+      adImg: require('../images/ads/freshApp1.jpg'),
       adTitle: 'Fresh App'
       // { adImg }: require('../src/images/ads/freshApp1.jpg'),
     //   ad2: require('../src/images/ads/freshApp2.jpg'),
@@ -68,9 +73,9 @@ class Newsfeed extends Component {
     //Add a variable here to map through the ads object.
       return (   
         <div style={styles.container}>
-          {/* <Header /> */}
+          <Header />
           <main style={styles.main}>
-            {/* <Nav style={styles.mainNav} /> */}
+            <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
               <MyForm style={styles.mainForm}
                 liveUpdateTitle={this.liveUpdateTitle}
@@ -83,12 +88,10 @@ class Newsfeed extends Component {
             </section>
             <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
-              {/* <Ad */}
-              
-              />
+              <Ad />
             </aside>
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       )
     }

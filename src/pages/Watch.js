@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 
-
-
 class Watch extends Component {
     render() {
-        return (
-            
+        return (   
             <section className="">
-        <h1>Watch</h1>
+                <h1>Watch</h1>
             </section>
-        
         );
     }
 }

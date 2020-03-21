@@ -1,18 +1,15 @@
 import React from 'react'
-
 import { NavLink } from 'react-router-dom'
+
 // with functionality use class
 const Nav = () => {
-
     return (
         <nav style={styles.navContainer}>
             {/* Profile for header? */}
-
-           <NavLink to="/Profile">Profile</NavLink>
-           <NavLink to="/NewsFeed">Newsfeed</NavLink>
-           <NavLink to="/Messages">Messages</NavLink>
-           <NavLink to="/Watch">Watch</NavLink>
-           
+            <NavLink to="/Profile">Profile</NavLink>
+            <NavLink to="/NewsFeed">Newsfeed</NavLink>
+            <NavLink to="/Messages">Messages</NavLink>
+            <NavLink to="/Watch">Watch</NavLink>
         </nav>
         
     )
