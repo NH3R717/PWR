@@ -6,7 +6,9 @@ import React, { Component } from 'react'
 //.. means go up a level, then find the components folder. Then the file.
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-import Ad from '../components/Ads'
+//THIS WAS MISSING THE S
+//import Ad from '../components/Ads'
+import Ads from '../components/Ads'
 import MyForm from '../components/MyForm.js'
 import Footer from '../components/Footer'
 import ListItem from '../components/ListItem'
@@ -23,13 +25,20 @@ class Newsfeed extends Component {
       postImage: require('../images/postMain.jpg')
       //postImage: require('../src/images/postMain.jpg')
     }],
-    ads: [{
-      adImg: require('../images/ads/freshApp1.jpg'),
-      adTitle: 'Fresh App'
-      // { adImg }: require('../src/images/ads/freshApp1.jpg'),
-    //   ad2: require('../src/images/ads/freshApp2.jpg'),
-    //   ad3: require('../src/images/ads/freshApp3.jpg')
-    }]
+    ads: [
+      {
+        adImg: require('../images/ads/freshApp1.jpg'),
+        adTitle: 'Fresh App'
+      },
+      {
+        adImg: require('../images/ads/freshApp2.jpg'),
+        adTitle: 'Fresh App New and Improved'
+      },
+      {
+      adImg: require('../images/ads/freshApp3.jpg'),
+      adTitle: 'Fresh App New and Improved'
+      }
+    ]
   }
 
   //This is getting the value for only the first input.
@@ -53,13 +62,12 @@ class Newsfeed extends Component {
     this.setState({
       postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
     });
-  this.setState({ titleInput: '' })
-  this.setState({ descriptionInput: '' })
-  e.target.reset()
-  //You can empty the liveUpdates here by setting it = ''
+    this.setState({ titleInput: '' })
+    this.setState({ descriptionInput: '' })
+    e.target.reset()
+    //You can empty the liveUpdates here by setting it = ''
+    }
   }
-  }
-  
   removeName = key => {
     this.state.postList.splice(key, 1)
     //You will want to copy the original array
@@ -71,6 +79,10 @@ class Newsfeed extends Component {
       return <ListItem key={i} val={element} delMe={() => this.removeName(i)} />  
     })    
     //Add a variable here to map through the ads object.
+
+    let myAds = this.state.ads.map((element, i) => {
+      return <Ads key={i} val={element} />
+    })
       return (   
         <div style={styles.container}>
           <Header />
@@ -88,7 +100,8 @@ class Newsfeed extends Component {
             </section>
             <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
-              <Ad />
+              {/* <Ads /> */}
+              {myAds}
             </aside>
           </main>
           <Footer />

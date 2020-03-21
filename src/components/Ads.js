@@ -1,17 +1,14 @@
 import React from 'react'
 
+//This is the container for a single ad.
 const Ads = props => {
-    
     return (
-        <div style={styles.aside}>
-            <h2 style={styles.freshApps}>Fresh Apps</h2>
-            {/* This should just be one ad place older. Example: */}
-            <ul key={props.id} style={styles.adImage}>
-                <img style={styles.adBox} src={props.adImg} alt="advert" />
-            </ul>
+        <div style={styles.adImage} key={props.id}>
+            {/* Make this a prop */}
+            <h2 style={styles.freshApps}>{props.val.adTitle}</h2>
+            <img style={styles.adBox} src={props.val.adImg} alt="advert" />
         </div>
     )
-    
 }
 export default Ads
 
