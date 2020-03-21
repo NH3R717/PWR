@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from '../../components/Search.js'
+// import Search from '../../components/Search.js'
 import wizzlet_jr from '../../images/wizzlet_jr.jpg'
 import s_cafe from '../../images/s_cafe.png'
 import { IoIosSettings } from 'react-icons/io'
@@ -11,7 +11,8 @@ const Header = props => {
             <div>
                 <img src={s_cafe} alt="logo" style={styles.s_cafe} />
             </div>
-            <Search />
+            {/* <Search searchList={this.searchList}
+            placeholder=' Search ...'/> */}
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <div style={styles.headerRight}>
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />

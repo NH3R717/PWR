@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaSearchDollar } from "react-icons/fa";
 
+
+
 const Search = props => {
 
     return (
@@ -10,7 +12,9 @@ const Search = props => {
             <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button>
             <input
                 style={styles.input}
-                placeholder=" Search..." />
+                type='text'
+                onChange={props.searchList} />
+                {/* placeholder={props.placeholder} /> */}
         </form>
     )
 
