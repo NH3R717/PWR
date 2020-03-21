@@ -14,6 +14,8 @@ import Footer from '../components/Footer'
 import ListItem from '../components/ListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
+//Add the search function here. Then adjust the loop by adding the filter on line 80 mylist var.
+
 class Newsfeed extends Component {
   state = {
     titleInput: '',
