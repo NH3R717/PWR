@@ -10,6 +10,7 @@ const Search = props => {
             <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button>
             <input
                 style={styles.input}
+                type= 'text'
                 placeholder=" Search..." />
         </form>
     )

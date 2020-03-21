@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
-// import Header from './components/Header'
 import Routes from './components/Routes'
-import Nav from './components/Nav'
+// import Nav from './components/Nav'
+// import Header from './components/Header'
 // import Ads from './components/Ads'
-// import MyForm from './components/MyForm.js'
 // import Footer from './components/Footer'
-// import { Router } from 'react-router';
+
 
 // React Router
 import { BrowserRouter as Router} from 'react-router-dom'
@@ -19,11 +18,12 @@ class App extends Component {
         
       <Router>
         <div>
-          {/* <Header /> */}
-          <Nav />
+
+          {/* <Header />
+          <Nav /> */}
           <Routes />
-          {/* <Ads /> */}
-          {/* <Footer /> */}
+          {/* <Ads />
+          <Footer /> */}
 
         </div>
       </Router>

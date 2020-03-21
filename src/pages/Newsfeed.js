@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-// import './App.css';
-import Header from './components/Header'
-import Nav from './components/Nav'
-import Ad from './components/Ads'
+import './App.css';
+// import Header from './components/Header'
+// import Nav from './components/Nav'
+// import Ad from './components/Ads'
 import MyForm from './components/MyForm.js'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import ListItem from './components/ListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
@@ -48,7 +48,8 @@ class Newsfeed extends Component {
     this.setState({
       postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
     });
-
+  this.setState({ titleInput: '' })
+  this.setState({ descriptionInput: '' })
   e.target.reset()
   //You can empty the liveUpdates here by setting it = ''
   }
@@ -67,9 +68,9 @@ class Newsfeed extends Component {
     //Add a variable here to map through the ads object.
       return (   
         <div style={styles.container}>
-          <Header />
+          {/* <Header /> */}
           <main style={styles.main}>
-            <Nav style={styles.mainNav} />
+            {/* <Nav style={styles.mainNav} /> */}
             <section style={styles.addPostCard}>
               <MyForm style={styles.mainForm}
                 liveUpdateTitle={this.liveUpdateTitle}
@@ -82,12 +83,12 @@ class Newsfeed extends Component {
             </section>
             <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
-              <Ad
+              {/* <Ad */}
               
               />
             </aside>
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       )
     }
