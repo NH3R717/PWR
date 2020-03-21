@@ -30,22 +30,30 @@ class Newsfeed extends Component {
     ads: [
       {
         adImg: require('../images/ads/freshApp1.jpg'),
-        adTitle: 'Fresh App'
+        adTitle: 'Task Tracker'
       },
       {
         adImg: require('../images/ads/freshApp2.jpg'),
-        adTitle: 'Fresh App New and Improved'
+        adTitle: 'Wagui TW'
       },
       {
       adImg: require('../images/ads/freshApp3.jpg'),
-      adTitle: 'Fresh App New and Improved'
+      adTitle: 'Taco Town'
       }
     ]
   }
 
   //localStorage
-  componentDidMount(){
-    // if statement here to get the value of localStorage
+  componentDidMount() {
+    // getItem – reads local storage
+    // retrieves value
+    if (localStorage.getItem('postList')) {
+      // declare variable
+      let postList = JSON.parse(localStorage.getItem('postList'))
+      // update state – adds current object
+      // this.setState({postList:postList})
+      this.setState({ postList })
+    }
   }
 
   //This is getting the value for only the first input.
@@ -59,29 +67,43 @@ class Newsfeed extends Component {
     this.setState({descriptionInput: e.target.value})
   }
   
-  addName = e => {
-    e.preventDefault()
-    if (this.state.postTitle === 'null' || this.state.postTitle === '') {
-      alert('Add a title.');
-    } else if (this.state.postDescription === '' || this.state.postDescription === '') {
-        alert('Add a description.');
-    } else {
-    this.setState({
-      postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
-    });
-    this.setState({ titleInput: '' })
-    this.setState({ descriptionInput: '' })
+  searchList = e => {
+    this.setState({ search: e.target.values })
+}
+
+addName = e => {
+  e.preventDefault()
+  if (this.state.postTitle === 'null' || this.state.postTitle === '') {
+    alert('Add a title.');
+  } else if (this.state.postDescription === '' || this.state.postDescription === '') {
+      alert('Add a description.');
+  } else {
+  this.setState({
+    postList: [...this.state.postList, {postTitle:this.state.titleInput, postDescription:this.state.descriptionInput}]
+  });
+    
+// not adding first item to the LS – probably won't have time to figure out why (from video)
+    
+let postList = [...this.state.postList]
+localStorage.setItem('postList', JSON.stringify(postList))
+//You can empty the liveUpdates here by setting it = '' – done
+this.setState({ titleInput: '' })
+this.setState({ descriptionInput: '' })
     e.target.reset()
-    //You can empty the liveUpdates here by setting it = ''
-    //Add local storage here
-    }
+  
   }
-  removeName = key => {
-    this.state.postList.splice(key, 1)
-    //You will want to copy the original array
-    this.setState({postList:this.state.postList})
-    //Add localStorage here.
-  }
+  
+}
+
+removeName = key => {
+  this.state.postList.splice(key, 1)
+  //You will want to copy the original array
+  this.setState({
+    postList: [...this.state.postList]
+  })
+  let postList = [...this.state.postList]
+  localStorage.setItem('postList', JSON.stringify(postList))
+}
 
   render() {
     let myList = this.state.postList.map((element, i) => {
