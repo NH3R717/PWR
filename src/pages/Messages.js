@@ -4,7 +4,7 @@ import ListItem from '../components/ListItem'
 class Messages extends Component {
     state = {
         messageList: [{
-            sender: 'Rod McMansion',
+            sender: 'Roddey McMansion',
             message: 'Something about the stock market or Japan'
         },
         {
@@ -25,11 +25,20 @@ class Messages extends Component {
           // declare variable
           let messageList = JSON.parse(localStorage.getItem('messageList'))
           // update state – adds current object
-          // this.setState({postList:postList})
+          // this.setState({messageList:messageList})
           this.setState({ messageList })
         }
       }
-
+      removeName = key => {
+        this.state.messageList.splice(key, 1)
+        //You will want to copy the original array
+        this.setState({
+          messageList: [...this.state.messageList]
+        })
+        let messageList = [...this.state.messageList]
+        localStorage.setItem('messageList', JSON.stringify(messageList))
+      }
+    
     render() {
         let messageList = this.state.messageList.map((element, i) => {
             return <ListItem
