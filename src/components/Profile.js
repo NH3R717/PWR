@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-
+// new state
 
 class Profile extends Component {
     render() {

@@ -8,9 +8,9 @@ import Nav from './components/Nav'
 // import MyForm from './components/myForm/MyForm.js'
 // import Footer from './components/Footer'
 // import Profile from './components/Profile'
-// import ListItem from './components/ListItem'
+// import NewsfeedListItem from './components/NewsfeedListItem'
 
-
+// set up Nav
 
 import { BrowserRouter as Router } from 'react-router-dom'
 

@@ -7,7 +7,7 @@ import Ad from './components/Ads'
 import MyForm from './components/myForm/MyForm.js'
 import Footer from './components/Footer'
 import Profile from './components/Profile'
-import ListItem from './components/ListItem'
+import NewsfeedListItem from './components/NewsfeedListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
 function searchAlist(search) {
@@ -106,7 +106,7 @@ class App extends Component {
   render() {
     let myList = this.state.postList.map((element, i) => {
 
-      return <ListItem
+      return <NewsfeedListItem
         key={i}
         val={element}
         delMe={() => this.removeName(i)} />  
@@ -115,7 +115,7 @@ class App extends Component {
     const { search } = this.state
     myList = this.state.postList.filter(searchAlist(search)).map((element, i) =>  {
 
-      return <ListItem
+      return <NewsfeedListItem
         key={i}
         val={element}
         delMe={() =>this.removeName(i)} />

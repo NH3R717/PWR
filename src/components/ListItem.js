@@ -6,7 +6,7 @@ import { TiEdit } from "react-icons/ti";
 //This needs to be a list item or a div. You are looping through this. Right now you have it looping a ul list.  So it creates a new ul each time. You only want to loop through the list item.
 //Fix the syntax.
 //Make this look more like your own app. You can style it how you like.
-const ListItem = props => {
+const NewsfeedListItem = props => {
     
     return (
         //Your root element is already a ul 
@@ -29,7 +29,7 @@ const ListItem = props => {
 
 }
 
-export default ListItem
+export default NewsfeedListItem
 
 const styles = {
     listGroup: {
