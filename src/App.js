@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './App.css';
 import Routes from './components/Routes'
+
+//Remove links that you are not using
 // import Header from './components/header/Header'
 // import Search from './components/Search.js'
-import Nav from './components/Nav'
+//import Nav from './components/Nav'
 // import Ad from './components/Ads'
 // import MyForm from './components/myForm/MyForm.js'
 // import Footer from './components/Footer'
@@ -18,10 +20,8 @@ class App extends Component {
     render() {
         return (
             <Router>
-            <div>
-              <Routes />
-              <Nav />
-            </div>
+                <Routes />
+                {/* <Nav /> */}
             </Router>
         );
     }

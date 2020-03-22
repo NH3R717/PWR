@@ -11,6 +11,8 @@ class Profile extends Component {
     componentDidMount() {
         this.fetchRandomUser();
 }
+
+    //Your fetch is working correctly.  The problem is in your render.
     fetchRandomUser() {
 
         this.setState({
@@ -32,6 +34,7 @@ class Profile extends Component {
         )))
         .then(contacts => this.setState({
             contacts,
+            //You did not use this above.
             isLoading: false
         }))
         .then(parsedJSON => console.log(parsedJSON.results))
@@ -40,15 +43,21 @@ class Profile extends Component {
     }
 
     render() {
-        
-        const contacts = this.state.contacts.map((element, i) => {
-            return <ProfileListItem
-              key={i}
-              val={element}
-               />  
-            
-          }) 
-          return (       
+        //Get the state
+        const {contacts} = this.state
+        //Use destructuring here
+        //Declare variables
+        // const {username, fname, lname, street, city, state, zipcode, picture, email, phone} = contactsNew;
+        // This needs to change slightly.
+        // const contactsNew = this.state.contacts.map((element, i) => {
+        //     return <ProfileListItem
+        //                 key={i}
+        //                 val={element}
+        //                 name={name}
+        //                 email={email}
+        //                 phone={phone}
+        //             />  
+        return (       
             <section className="">
                 <h1>Profile</h1>
                 <ul style={styles.list}>{contacts}</ul>
@@ -56,7 +65,6 @@ class Profile extends Component {
         );
     }
 }
-
 const styles = {
     main: {
         display: 'flex',

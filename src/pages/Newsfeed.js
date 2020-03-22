@@ -9,7 +9,7 @@ import Nav from '../components/Nav'
 //THIS WAS MISSING THE S
 //import Ad from '../components/Ads'
 import Ads from '../components/Ads'
-import Search from '../components/Search.js'
+// import Search from '../components/Search.js'
 import MyForm from '../components/MyForm.js'
 import Footer from '../components/Footer'
 import NewsfeedListItem from '../components/NewsfeedListItem'
@@ -149,12 +149,11 @@ removeName = key => {
 
       return (   
         <div style={styles.container}>
-          <Header />
+          {/* Pass throught the props */}
+          <Header searchList={this.searchList} />
           <main style={styles.main}>
             <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
-            <Search searchList={this.searchList}
-            placeholder=' Search ...'/>
               <MyForm style={styles.mainForm}
                 liveUpdateTitle={this.liveUpdateTitle}
                 titleInput={this.state.titleInput}

@@ -1,12 +1,8 @@
 import React from 'react'
 
-
 const ProfileListItem= props => {
-    
     return (
-
         <ul key={props.user} style={styles.listGroup}>
-         
             <li style={styles.listDescription}>{props.val.picture}</li>
             <li style={styles.listDescription}>{props.val.name.first}</li>
             <li style={styles.listDescription}>{props.val.name.last}</li>
@@ -18,7 +14,6 @@ const ProfileListItem= props => {
             <li style={styles.listDescription}>{props.val.location.city}</li>
             <li style={styles.listDescription}>{props.val.location.state}</li>
             <li style={styles.listDescription}>{props.val.location.postcode}</li>
-
         </ul>      
     )
 
