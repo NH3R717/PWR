@@ -40,7 +40,11 @@ class Messages extends Component {
       }
     
     render() {
-        let messageList = this.state.messageList.map((element, i) => {
+
+        let messageList = [...this.state.messageList]
+localStorage.setItem('messageList', JSON.stringify(messageList))
+        
+        messageList = this.state.messageList.map((element, i) => {
             return <ListItem
               key={i}
               val={element}
