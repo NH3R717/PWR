@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import ListItem from '../components/ListItem'
+import MessagesListItem from '../components/MessagesListItem'
+
+// local storage being reset on page load.
 
 class Messages extends Component {
     state = {
         messageList: [{
             sender: 'Roddey McMansion',
-            message: 'Something about the stock market or Japan'
+            message: 'Something about the stock market or Japan.'
         },
         {
             sender: '"Ace"',
@@ -44,8 +46,8 @@ class Messages extends Component {
         let messageList = [...this.state.messageList]
 localStorage.setItem('messageList', JSON.stringify(messageList))
         
-        messageList = this.state.messageList.map((element, i) => {
-            return <ListItem
+            messageList = this.state.messageList.map((element, i) => {
+            return <MessagesListItem
               key={i}
               val={element}
               delMe={() => this.removeName(i)} />  

@@ -12,7 +12,7 @@ import Ads from '../components/Ads'
 import Search from '../components/Search.js'
 import MyForm from '../components/MyForm.js'
 import Footer from '../components/Footer'
-import ListItem from '../components/ListItem'
+import NewsfeedListItem from '../components/NewsfeedListItem'
 // import adImg from '../images/ads/freshApp1.jpg'
 
 //Add the search function here. Then adjust the loop by adding the filter on line 80 mylist var.
@@ -119,7 +119,7 @@ removeName = key => {
   render() {
     // for the postList
     let myList = this.state.postList.map((element, i) => {
-      return <ListItem
+      return <NewsfeedListItem
         key={i}
         val={element}
         delMe={() => this.removeName(i)} />  
@@ -140,7 +140,7 @@ removeName = key => {
 
     const { search } = this.state
     myList = this.state.postList.filter(searchAlist(search)).map((element, i) =>  {
-      return <ListItem
+      return <NewsfeedListItem
         key={i}
         val={element}
         delMe={() =>this.removeName(i)} />
@@ -162,7 +162,8 @@ removeName = key => {
                 descriptionInput={this.state.descriptionInput}
                 addName={this.addName} />
                 {/* //You have a ul here so you dont need the ul at the list item. */}
-                <ul style={styles.list}>{myList}</ul>
+                <li style={styles.list}>{myList}</li>
+                {/* <ul style={styles.list}>{myList}</ul> */}
             </section>
             <aside style={styles.asideAd}>
               {/* Loop through the ad object in the state */}
