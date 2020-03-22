@@ -17,6 +17,7 @@ import ListItem from '../components/ListItem'
 
 //Add the search function here. Then adjust the loop by adding the filter on line 80 mylist var.
 
+// !uncomment below for search
 function searchAlist(search) {
   return function (searchMe) {
     
@@ -78,7 +79,7 @@ class Newsfeed extends Component {
   }
   
   searchList = e => {
-    this.setState({ search: e.target.values })
+    this.setState({ search: e.target.value })
 }
 
 addName = e => {
@@ -134,6 +135,8 @@ removeName = key => {
     })
 
     // for the search
+    
+// !uncomment below for search
 
     const { search } = this.state
     myList = this.state.postList.filter(searchAlist(search)).map((element, i) =>  {
