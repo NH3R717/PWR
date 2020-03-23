@@ -1,10 +1,9 @@
 import React from 'react'
 
-//This is the container for a single ad.
+//this is the container for a single ad.
 const Ads = props => {
     return (
         <div style={styles.adImage} key={props.id}>
-            {/* Make this a prop */}
             <h2 style={styles.freshApps}>{props.val.adTitle}</h2>
             <img style={styles.adBox} src={props.val.adImg} alt="advert" />
         </div>
@@ -12,16 +11,16 @@ const Ads = props => {
 }
 export default Ads
 
-//You will want to style this just for the ad. I would style the aside on the app.js page
 const styles = {
     aside: {
         display: 'flex',
+        margin: '0 .5em 0 0',
         flexDirection: 'column',
         width: '10em',
         fontFamily: 'Helvetica Neue'
     },
     freshApps: {
-        margin: '2em 0 0 .2em',
+        margin: '2em 2.3em 0 .2em',
         color: 'rgba(3, 0, 39, 1)'
     },
     adBox: {
@@ -29,8 +28,8 @@ const styles = {
         margin: '1em 0 0 0',
         flexDirection: 'column',
         listStyleType: 'none',
-        width: '9em',
-        height: '15em',
+        width: '11em',
+        height: 'auto',
         textAlign: 'center',
         backgroundColor: 'dimGrey'
     },
@@ -38,5 +37,4 @@ const styles = {
         padding: '0',
         margin: '0'
     }
-
 }

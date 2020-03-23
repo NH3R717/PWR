@@ -44,19 +44,27 @@ class Profile extends Component {
 
     render() {
         //Get the state
-        const {contacts} = this.state
+        const { contacts } = this.state
         //Use destructuring here
         //Declare variables
-        // const {username, fname, lname, street, city, state, zipcode, picture, email, phone} = contactsNew;
         // This needs to change slightly.
-        // const contactsNew = this.state.contacts.map((element, i) => {
-        //     return <ProfileListItem
-        //                 key={i}
-        //                 val={element}
-        //                 name={name}
-        //                 email={email}
-        //                 phone={phone}
-        //             />  
+        const contactsNew = this.state.contacts.map((element, i) => {
+            const { username, fname, lname, street, city, state, zipcode, picture, email, phone } = contactsNew;
+            return <ProfileListItem
+                        key={i}
+                        val={element}
+                        picture={picture}
+                        fname={fname}
+                        lname={lname}
+                        username={username}
+                        street={street}
+                        city={city}
+                        state={state}
+                        zipcode={zipcode}
+                        email={email}
+                        phone={phone}
+                    />  
+    })
         return (       
             <section className="">
                 <h1>Profile</h1>

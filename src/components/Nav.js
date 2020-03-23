@@ -7,33 +7,29 @@ const Nav = () => {
         <nav style={styles.navContainer}>
             {/* Profile for header? */}
             {/* Profile should go where the sprocket is in the header. Not in the navigation */}
-            <NavLink to="/Profile">Profile</NavLink>
-            <NavLink to="/NewsFeed">Newsfeed</NavLink>
-            <NavLink to="/Messages">Messages</NavLink>
-            <NavLink to="/Watch">Watch</NavLink>
+            <NavLink style={styles.a} to="/Profile">Profile</NavLink>
+            <NavLink style={styles.a}  to="/NewsFeed">Newsfeed</NavLink>
+            <NavLink style={styles.a}  to="/Messages">Messages</NavLink>
+            <NavLink style={styles.a}  to="/Watch">Watch</NavLink>
         </nav>
-        
     )
-
 }
 
 export default Nav
 
+// add css link properties (hover)
+
 const styles = {
     navContainer: {
+        padding: '2em 0 0 1.5em',
         display: 'flex',
         flexDirection: 'column',
         listStyleType: 'none',
-        width: '10em',
-        fontFamily: 'Helvetica Neue'
     },
-    h2: {
-        marginLeft: '1.4em',
+    a: {
+        fontFamily: 'Helvetica Neue',
+        fontSize: '1.3em',
         color: 'rgba(3, 0, 39, 1)',
-    },
-    ul: {
-        display: 'flex',
-        listStyleType: 'none',
-        flexDirection: 'column',
+        textDecoration: 'none'
     }
 }

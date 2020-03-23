@@ -1,8 +1,8 @@
 import React from 'react'
-// import Search from './Search.js'
 import MyBtn from '../components/MyBtn.js'
 import { TiEdit } from "react-icons/ti";
 
+// post add from
 const Myform = props => {
 
     return (
@@ -27,17 +27,13 @@ const Myform = props => {
                 placeholder=" What's good..." />
             
             <p style={styles.p}>Title: {props.titleInput}</p>
-          
+
             <p style={styles.p}>Description: {props.descriptionInput}</p>
-            {/* <Search /> */}
+
             <MyBtn style={styles.myBtn}> <TiEdit size={100} /> </MyBtn>
-            {/* <button style={styles.myBtn} > <TiEdit size={30} />
-        {props.btnText}
-        </button> */}
 
         </form>
     )
-
 }
 
 export default Myform
@@ -46,7 +42,8 @@ const styles= {
     myForm: {
         backgroundColor: 'rgba(51, 102, 153, .85)',
         borderRadius: '.6em',
-        fontFamily: 'Helvetica Neue'
+        fontFamily: 'Helvetica Neue',
+        margin:'0 0 1em 0'
     },
     // myBtn: {
     //     height: '100px'

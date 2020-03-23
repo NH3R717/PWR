@@ -1,13 +1,13 @@
 import React from 'react'
-// import { FaSearchDollar } from "react-icons/fa";
+import { FaSearchDollar } from "react-icons/fa";
 
 const Search = props => {
 
     return (
         <form
             style={styles.searchForm}>
-            {/* onSubmit={props.searchMe}>
-            <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button> */}
+            {/* onSubmit=alert("this button has no function")> */}
+            <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button>
             <input
                 style={styles.input}
                 type='text'
@@ -15,7 +15,6 @@ const Search = props => {
                 placeholder={props.placeholder} />
         </form>
     )
-
 }
 
 export default Search
@@ -24,9 +23,8 @@ const styles = {
     searchForm: {
         display: 'flex',
     },
-
     input: {
-        margin: '1em 2em 0 0',
+        margin: '1.3em 2em 0 0',
         height: '1.3em',
         borderStyle: 'solid',
         borderRadius: '.4em',
@@ -35,9 +33,8 @@ const styles = {
         backgroundColor: 'rgba(250, 244, 113, 1)',
         fontSize: '1.25em',   
     },
-
     searchButton: {
-        margin: '0 0 1em 0em',
+        margin: '1.3em 0 1em 0em',
         border: 'none',
         background: 'none',
         color: 'rgba(21, 30, 63, 1)',
