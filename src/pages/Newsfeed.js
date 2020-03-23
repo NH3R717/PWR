@@ -63,7 +63,9 @@ class Newsfeed extends Component {
 // adds input values to data object
 addName = e => {
   e.preventDefault()
-  if (this.state.postTitle === 'null' || this.state.postTitle === '') {
+  //This is grabbing only the postTitle if it is at the first level
+  //You need to have it point to the postList then postTitle. Its not drilling  down the object
+  if (this.state.titleInput === 'null' || this.state.titleInput === '') {
     alert('Add a title.');
   } else if (this.state.postDescription === '' || this.state.postDescription === '') {
       alert('Add a description.');
