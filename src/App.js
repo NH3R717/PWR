@@ -21,6 +21,7 @@ class App extends Component {
         return (
             <Router>
                 <Routes />
+                {/* Remove */}
                 {/* <Nav /> */}
             </Router>
         );
