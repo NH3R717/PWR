@@ -72,7 +72,6 @@ render() {
       key={i}
       val={element} />
   })
-
         let messageList = [...this.state.messageList]
 localStorage.setItem('messageList', JSON.stringify(messageList))
         
@@ -110,7 +109,7 @@ const styles = {
       width: '100%'
   },
   asideAd: {
-    margin: '0 2em 0 1em'
+    margin: '0 1.8em 0 1em'
   },
     h1: {
       margin: '.6em 0 .82em 2em',

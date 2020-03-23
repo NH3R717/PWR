@@ -49,14 +49,18 @@ class Profile extends Component {
         // Use destructuring here
         // Declare variables
         // This needs to change slightly.
+
+
+        // let contactsNew = this.state.contacts.map(contact => {
+        //     const 
         
-        let contactsNew { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
-        
-        contactsNew = this.state.contacts.map((element, i) => {
+            let contactsNew = this.state.contacts.map(contact => {
+                const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
+
 
             return <ProfileListItem
-                        key={i}
-                        val={element}
+                        // key={i}
+                        // val={element}
                         picture={picture}
                         fname={fname}
                         lname={lname}
