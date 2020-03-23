@@ -65,7 +65,7 @@ addName = e => {
   e.preventDefault()
   //This is grabbing only the postTitle if it is at the first level
   //You need to have it point to the postList then postTitle. Its not drilling  down the object
-  if (this.state.titleInput === 'null' || this.state.titleInput === '') {
+  if (this.state.postList.titleInput === 'null' || this.state.postList.titleInput === '') {
     alert('Add a title.');
   } else if (this.state.postDescription === '' || this.state.postDescription === '') {
       alert('Add a description.');
@@ -78,7 +78,6 @@ addName = e => {
     
 let postList = [...this.state.postList]
 localStorage.setItem('postList', JSON.stringify(postList))
-//You can empty the liveUpdates here by setting it = '' – done
 this.setState({ titleInput: '' })
 this.setState({ descriptionInput: '' })
     e.target.reset()
@@ -88,7 +87,6 @@ this.setState({ descriptionInput: '' })
   // deletes selected 
 removeName = key => {
   this.state.postList.splice(key, 1)
-  //You will want to copy the original array
   this.setState({
     postList: [...this.state.postList]
   })
@@ -167,13 +165,8 @@ const styles= {
   list: {
     padding: '0'
   },
-  // mainAside: {
-  //   width: "20em"
-  // },
   asideAd: {
-    display: 'flex',
-    flexDirection: 'column',
-    // width: '65%'
+    margin: '0 .8em 0 1em'
   },
   wizzlet_jr: {
     borderRadius: '1em',

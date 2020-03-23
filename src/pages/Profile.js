@@ -45,11 +45,15 @@ class Profile extends Component {
     render() {
         //Get the state
         const { contacts } = this.state
-        //Use destructuring here
-        //Declare variables
+
+        // Use destructuring here
+        // Declare variables
         // This needs to change slightly.
-        const contactsNew = this.state.contacts.map((element, i) => {
-            const { username, fname, lname, street, city, state, zipcode, picture, email, phone } = contactsNew;
+        
+        let contactsNew { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
+        
+        contactsNew = this.state.contacts.map((element, i) => {
+
             return <ProfileListItem
                         key={i}
                         val={element}
@@ -64,10 +68,11 @@ class Profile extends Component {
                         email={email}
                         phone={phone}
                     />  
-    })
+        })
+        
         return (       
             <section className="">
-                <h1>Profile</h1>
+                <h1 style={styles.h1}>Profile</h1>
                 <ul style={styles.list}>{contacts}</ul>
             </section>
         );
@@ -78,7 +83,14 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between'
-    }
+    },
+    h1: {
+        margin: '.6em 0 1em 2em',
+        fontFamily: 'Helvetica Neue',
+        fontSize: '2em',
+        color: 'rgba(3, 0, 39, 1)',
+        textDecoration: 'none'
+      }
 }
 
 

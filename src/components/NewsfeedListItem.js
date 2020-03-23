@@ -3,13 +3,9 @@ import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import { IoMdClose } from 'react-icons/io'
 import { TiEdit } from "react-icons/ti";
 
-//This needs to be a list item or a div. You are looping through this. Right now you have it looping a ul list.  So it creates a new ul each time. You only want to loop through the list item.
-//Fix the syntax.
 const NewsfeedListItem = props => {
     
     return (
-        //Your root element is already a ul 
-        //Fix this so that the JSX syntax is correct.
         <li key={props.id} style={styles.listGroup}>
             <div style={styles.avatarTitleButton}>
                 <div style={styles.avatarTitle}> 
@@ -25,7 +21,6 @@ const NewsfeedListItem = props => {
             <span style={styles.listDescription}>{props.val.postDescription}</span>
         </li>      
     )
-
 }
 
 export default NewsfeedListItem
@@ -35,7 +30,7 @@ const styles = {
         listStyle: 'none',
         margin: '0 0 1em 0',
         padding: '0 1em 2em 1em',
-        backgroundColor: 'rgba(51, 102, 153, .85)',
+        backgroundColor: 'rgba(51, 102, 153, .65)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'
     },

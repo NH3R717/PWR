@@ -12,16 +12,9 @@ const Ads = props => {
 export default Ads
 
 const styles = {
-    aside: {
-        display: 'flex',
-        margin: '0 .5em 0 0',
-        flexDirection: 'column',
-        width: '10em',
-        fontFamily: 'Helvetica Neue'
-    },
     freshApps: {
         margin: '2em 2.3em 0 .2em',
-        color: 'rgba(3, 0, 39, 1)'
+        color: 'rgba(3, 0, 39, 1)',
     },
     adBox: {
         display: 'flex',
@@ -29,9 +22,7 @@ const styles = {
         flexDirection: 'column',
         listStyleType: 'none',
         width: '11em',
-        height: 'auto',
-        textAlign: 'center',
-        backgroundColor: 'dimGrey'
+        height: 'auto', 
     },
     adImage: {
         padding: '0',

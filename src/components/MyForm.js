@@ -40,7 +40,7 @@ export default Myform
 
 const styles= {
     myForm: {
-        backgroundColor: 'rgba(51, 102, 153, .85)',
+        backgroundColor: 'rgba(51, 102, 153, .65)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue',
         margin:'0 0 1em 0'

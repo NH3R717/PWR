@@ -29,7 +29,9 @@ const styles = {
     a: {
         fontFamily: 'Helvetica Neue',
         fontSize: '1.3em',
-        color: 'rgba(3, 0, 39, 1)',
+        fontWeight: '900',
+        lineHeight: '1.7em',
+        color: 'rgba(51, 102, 153, 1)',
         textDecoration: 'none'
     }
 }

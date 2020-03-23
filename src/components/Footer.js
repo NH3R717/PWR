@@ -13,20 +13,18 @@ const Footer = () => {
 export default Footer
 
 const styles = {
-    
     footer: {
+        
         fontFamily: 'Helvetica Neue',
         display: 'flex',
         color: 'rgba(21, 30, 63, 1)',
         fontSize: '0.85em',
         paddingRight: '3em',
         justifyContent: 'right',
-        position: 'fixed', 
+        position: 'relative', 
         bottom: '0',
         left: '0',
         right: '0',
-        height: '4em'
-        
+        height: '4em' 
     }
-
 }
