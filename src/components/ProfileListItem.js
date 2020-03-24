@@ -8,38 +8,38 @@ const ProfileListItem= props => {
             <div style={styles.profileContent}>
             <div style={styles.nameGroup}>
             <div style={styles.lineItem}>
-            <li>User Name:</li>
+            <li>User Name: </li>
             <li style={styles.listDescription}>{props.login}</li>
             </div>
             <div style={styles.lineItem}>
-            <li>First Name:</li>
+            <li>First Name: </li>
             <li style={styles.listDescription}>{props.first}</li>
             </div>
             <div style={styles.lineItem}>
-            <li>Last Name:</li>
+            <li>Last Name: </li>
             <li style={styles.listDescription}>{props.last}</li>
             </div>
             <div style={styles.lineItem}>
-            <li>Phone:</li>
+            <li>Phone: </li>
             <li style={styles.listDescription}>{props.phone}</li>
             </div>
             </div>
 
             <div style={styles.addressGroup}>
             <div style={styles.lineItem}>      
-            <li>Street:</li>
+            <li>Street: </li>
             <li style={styles.listDescription}>{props.street}</li>
             </div>
             <div style={styles.lineItem}>
-            <li>City:</li>
+            <li>City: </li>
             <li style={styles.listDescription}>{props.city}</li>
             </div>
             <div style={styles.lineItem}>
-            <li>State:</li>
+            <li>State: </li>
             <li style={styles.listDescription}>{props.state}</li> 
             </div>
             <div style={styles.lineItem}>
-            <li>Zipcode:</li>
+            <li>Zipcode: </li>
             <li style={styles.listDescription}>{props.postcode}</li>
             </div>
             </div>
@@ -47,7 +47,6 @@ const ProfileListItem= props => {
             
         </ul>      
     )
-
 }
 
 export default ProfileListItem
@@ -64,6 +63,8 @@ const styles = {
         fontFamily: 'Helvetica Neue'
     },
     profileContent: {
+        // margin: '1em 0 1em 0',
+        padding: '1em 0 .5em 0',
         display: 'flex',
         justifyContent: 'space-between',
         margin: '0'
@@ -76,5 +77,3 @@ const styles = {
     }
   
 }
-
-// header implemented on all views / profile display (needs more style) / profile button needs to be implemented

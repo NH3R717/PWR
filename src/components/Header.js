@@ -10,8 +10,6 @@ const Header = props => {
             <div>
                 <img src={s_cafe} alt="logo" style={styles.s_cafe} />
             </div>
-            {/* <Search /> */}
-            {/* Send through the list */}
             <Search searchList={props.searchList}
             placeholder=' Search ...'/>
             <h1 style={styles.h1}>{props.pgTitle}</h1>
@@ -19,7 +17,7 @@ const Header = props => {
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
                 <h3 style={styles.h3}>Baby Wizzlet</h3>
                 {/* Put the nav link here for the profile page. */}
-                <span style={styles.icon}> <IoIosSettings size={30} /> </span>
+                <button style={styles.icon} onClick={'/Profile'}> <IoIosSettings size={30} /> </button>
             </div>
         </header>
     )
@@ -62,6 +60,9 @@ const styles= {
       icon: {
         borderRadius: '15em',
         margin: '1.7em 1.5em 1.5em 1.5em',
+        border: 'none',
         color: 'rgba(21, 30, 63, 1)',
+        background: 'none',
+
       }
 }

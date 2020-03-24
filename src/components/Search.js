@@ -6,8 +6,7 @@ const Search = props => {
     return (
         <form
             style={styles.searchForm}>
-            {/* onSubmit=alert("this button has no function")> */}
-            <button style={styles.searchButton} onClick={props.delMe}> <FaSearchDollar size={20} /></button>
+            <button style={styles.searchButton}> <FaSearchDollar size={20} /></button>
             <input
                 style={styles.input}
                 type='text'
