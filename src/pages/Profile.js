@@ -22,8 +22,7 @@ class Profile extends Component {
 
         fetch('https://randomuser.me/api')
         .then(response => response.json())
-        .then(parsedJSON => parsedJSON.results.map(user => (
-            {
+        .then(parsedJSON => parsedJSON.results.map(user => ({
                 picture: `${user.thumbnail}`,
                 name: `${user.name.first} ${user.name.last}`,
                 login: `${user.login.userName}, ${user.login.password}`,
@@ -54,8 +53,10 @@ class Profile extends Component {
         // let contactsNew = this.state.contacts.map(contact => {
         //     const 
         
-            let contactsNew = this.state.contacts.map(contact => {
-                const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
+            let contactsNew =contacts.map(contact => {
+                const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contact;
+            // let contactsNew = this.state.contacts.map(contact => {
+            //     const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
 
 
             return <ProfileListItem
@@ -77,7 +78,7 @@ class Profile extends Component {
         return (       
             <section className="">
                 <h1 style={styles.h1}>Profile</h1>
-                <ul style={styles.list}>{contacts}</ul>
+                <ul style={styles.list}>{contactsNew}</ul>
             </section>
         );
     }

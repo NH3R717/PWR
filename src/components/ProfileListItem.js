@@ -3,17 +3,17 @@ import React from 'react'
 const ProfileListItem= props => {
     return (
         <ul key={props.user} style={styles.listGroup}>
-            <li style={styles.listDescription}>{props.val.picture}</li>
-            <li style={styles.listDescription}>{props.val.name.first}</li>
-            <li style={styles.listDescription}>{props.val.name.last}</li>
-            <li style={styles.listDescription}>{props.val.login.userName}</li>
-            <li style={styles.listDescription}>{props.val.login.password}</li>
-            <li style={styles.listDescription}>{props.val.email}</li>
-            <li style={styles.listDescription}>{props.val.phone}</li>
-            <li style={styles.listDescription}>{props.val.location.street}</li>
-            <li style={styles.listDescription}>{props.val.location.city}</li>
-            <li style={styles.listDescription}>{props.val.location.state}</li>
-            <li style={styles.listDescription}>{props.val.location.postcode}</li>
+            <li style={styles.listDescription}>{props.picture}</li>
+            <li style={styles.listDescription}>{props.first}</li>
+            <li style={styles.listDescription}>{props.lname}</li>
+            <li style={styles.listDescription}>{props.userName}</li>
+            <li style={styles.listDescription}>{props.password}</li>
+            <li style={styles.listDescription}>{props.email}</li>
+            <li style={styles.listDescription}>{props.phone}</li>
+            <li style={styles.listDescription}>{props.street}</li>
+            <li style={styles.listDescription}>{props.city}</li>
+            <li style={styles.listDescription}>{props.state}</li>
+            <li style={styles.listDescription}>{props.postcode}</li>
         </ul>      
     )
 
