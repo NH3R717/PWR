@@ -114,6 +114,10 @@ const styles = {
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
+    list: {
+        padding: '0 1em',
+        width: '100%'
+    },
     h1: {
         margin: '.6em 0 1em 2em',
         fontFamily: 'Helvetica Neue',

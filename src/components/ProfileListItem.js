@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileListItem= props => {
     return (
-        <ul key={props.user} style={styles.listGroup}>
+        <section key={props.user} style={styles.listGroup}>
 
             {/* What is better way to lay this out - the div? */}
             <div style={styles.profileContent}>
@@ -45,7 +45,7 @@ const ProfileListItem= props => {
             </div>
             </div>
             
-        </ul>      
+        </section>      
     )
 }
 
@@ -56,8 +56,8 @@ const styles = {
 
         listStyle: 'none',
         margin: '0 0 1em 0',
-        padding: '0 1em 2em 1em',
-        width: '100%',
+        padding: '0 1em .6em 1em',
+        // width: '100%',
         backgroundColor: 'rgba(51, 102, 153, .65)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'

@@ -1,5 +1,6 @@
 import React from 'react'
 import Search from './Search.js'
+import { Link } from 'react-router-dom';
 import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import s_cafe from '../images/s_cafe.png'
 import { IoIosSettings } from 'react-icons/io'
@@ -16,8 +17,13 @@ const Header = props => {
             <div style={styles.headerRight}>
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
                 <h3 style={styles.h3}>Baby Wizzlet</h3>
+                
                 {/* Put the nav link here for the profile page. */}
-                <button style={styles.icon} onClick={'/Profile'}> <IoIosSettings size={30} /> </button>
+                <Link to="/profile">
+     <button style={styles.icon} > <IoIosSettings size={30} /> 
+     </button>
+                </Link>
+                {/* <button style={styles.icon} onClick={'/Profile'}> <IoIosSettings size={30} /> </button> */}
             </div>
         </header>
     )
