@@ -25,13 +25,17 @@ class Profile extends Component {
         .then(parsedJSON => parsedJSON.results.map(user => ({
                 picture: `${user.thumbnail}`,
                 //You have two inputs for this so it would look like this.
+                //The left side is the key. The right side is for the value. The value is coming from the api object.
                 first:`${user.name.first}`,
                 last:`${user.name.last}`,
                 name: `${user.name.first} ${user.name.last}`,
                 login: `${user.login.userName}, ${user.login.password}`,
                 email: `${user.email}`,
                 phone: `${user.phone}`,
-                location: `${user.location.street}, ${user.location.city}, ${user.location.state}, ${user.location.postcode} `
+                street: `${user.location.street.number}, ${user.location.street.name}`,
+                city: `${user.location.city}`,
+                state: `${user.location.state}`,
+                // location: `${user.location.street.number}${user.location.city} ${user.location.state} ${user.location.postcode} `
             }
         )))
         .then(contacts => this.setState({
@@ -63,7 +67,7 @@ class Profile extends Component {
 
 
             return <ProfileListItem
-                        // key={i}
+                        key={username}
                         // val={element}
                         picture={picture}
                         name={name}

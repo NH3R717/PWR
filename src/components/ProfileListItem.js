@@ -6,7 +6,9 @@ const ProfileListItem= props => {
             <li style={styles.listDescription}>{props.picture}</li>
             <li style={styles.listDescription}>{props.first}</li>
             <li style={styles.listDescription}>{props.last}</li>
-            <li style={styles.listDescription}>{props.userName}</li>
+            {/* //Or you can do this. */}
+            <li style={styles.listDescription}>{props.name}</li>
+            <li style={styles.listDescription}>{props.username}</li>
             <li style={styles.listDescription}>{props.password}</li>
             <li style={styles.listDescription}>{props.email}</li>
             <li style={styles.listDescription}>{props.phone}</li>
