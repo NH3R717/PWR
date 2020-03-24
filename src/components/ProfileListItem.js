@@ -5,7 +5,7 @@ const ProfileListItem= props => {
         <ul key={props.user} style={styles.listGroup}>
             <li style={styles.listDescription}>{props.picture}</li>
             <li style={styles.listDescription}>{props.first}</li>
-            <li style={styles.listDescription}>{props.lname}</li>
+            <li style={styles.listDescription}>{props.last}</li>
             <li style={styles.listDescription}>{props.userName}</li>
             <li style={styles.listDescription}>{props.password}</li>
             <li style={styles.listDescription}>{props.email}</li>

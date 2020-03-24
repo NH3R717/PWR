@@ -24,6 +24,9 @@ class Profile extends Component {
         .then(response => response.json())
         .then(parsedJSON => parsedJSON.results.map(user => ({
                 picture: `${user.thumbnail}`,
+                //You have two inputs for this so it would look like this.
+                first:`${user.name.first}`,
+                last:`${user.name.last}`,
                 name: `${user.name.first} ${user.name.last}`,
                 login: `${user.login.userName}, ${user.login.password}`,
                 email: `${user.email}`,
@@ -54,7 +57,7 @@ class Profile extends Component {
         //     const 
         
             let contactsNew =contacts.map(contact => {
-                const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contact;
+                const  { picture, username, street, city, state, zipcode, email, phone, name, first, last } = contact;
             // let contactsNew = this.state.contacts.map(contact => {
             //     const  { picture, username, fname, lname, street, city, state, zipcode, email, phone } = contacts;
 
@@ -63,8 +66,10 @@ class Profile extends Component {
                         // key={i}
                         // val={element}
                         picture={picture}
-                        fname={fname}
-                        lname={lname}
+                        name={name}
+                        first={first}
+                        last={last}
+                        // lname={lname}
                         username={username}
                         street={street}
                         city={city}
