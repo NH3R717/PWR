@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Ads from '../components/Ads'
 import Footer from '../components/Footer'
@@ -37,8 +38,7 @@ class Messages extends Component {
         {
         adImg: require('../images/ads/freshApp3.jpg'),
         adTitle: 'Taco Town'
-        }],
-        search: ''
+        }]
       
     } 
     
@@ -83,7 +83,8 @@ localStorage.setItem('messageList', JSON.stringify(messageList))
             }) 
       
         return (       
-            <section className="">
+          <section className="">
+            <Header />
             <h1 style={styles.h1}>Messages</h1>
             <main style={styles.main}>
             <Nav />
@@ -103,7 +104,7 @@ export default Messages
 const styles = {
     main: {
         display: 'flex',
-    flexDirection: 'row',
+    // flexDirection: 'row',
     },
     list: {
       width: '100%'

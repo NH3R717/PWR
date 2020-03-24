@@ -3,19 +3,48 @@ import React from 'react'
 const ProfileListItem= props => {
     return (
         <ul key={props.user} style={styles.listGroup}>
-            <li style={styles.listDescription}>{props.picture}</li>
+
+            {/* What is better way to lay this out - the div? */}
+            <div style={styles.profileContent}>
+            <div style={styles.nameGroup}>
+            <div style={styles.lineItem}>
+            <li>User Name:</li>
+            <li style={styles.listDescription}>{props.login}</li>
+            </div>
+            <div style={styles.lineItem}>
+            <li>First Name:</li>
             <li style={styles.listDescription}>{props.first}</li>
+            </div>
+            <div style={styles.lineItem}>
+            <li>Last Name:</li>
             <li style={styles.listDescription}>{props.last}</li>
-            {/* //Or you can do this. */}
-            <li style={styles.listDescription}>{props.name}</li>
-            <li style={styles.listDescription}>{props.username}</li>
-            <li style={styles.listDescription}>{props.password}</li>
-            <li style={styles.listDescription}>{props.email}</li>
+            </div>
+            <div style={styles.lineItem}>
+            <li>Phone:</li>
             <li style={styles.listDescription}>{props.phone}</li>
+            </div>
+            </div>
+
+            <div style={styles.addressGroup}>
+            <div style={styles.lineItem}>      
+            <li>Street:</li>
             <li style={styles.listDescription}>{props.street}</li>
+            </div>
+            <div style={styles.lineItem}>
+            <li>City:</li>
             <li style={styles.listDescription}>{props.city}</li>
-            <li style={styles.listDescription}>{props.state}</li>
+            </div>
+            <div style={styles.lineItem}>
+            <li>State:</li>
+            <li style={styles.listDescription}>{props.state}</li> 
+            </div>
+            <div style={styles.lineItem}>
+            <li>Zipcode:</li>
             <li style={styles.listDescription}>{props.postcode}</li>
+            </div>
+            </div>
+            </div>
+            
         </ul>      
     )
 
@@ -25,59 +54,27 @@ export default ProfileListItem
 
 const styles = {
     listGroup: {
+
         listStyle: 'none',
         margin: '0 0 1em 0',
         padding: '0 1em 2em 1em',
+        width: '100%',
         backgroundColor: 'rgba(51, 102, 153, .65)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'
     },
-    avatarTitleButton: {
+    profileContent: {
         display: 'flex',
         justifyContent: 'space-between',
         margin: '0'
     },
-    avatarTitle: {
+    lineItem: {
         display: 'flex',
-        margin: '.0 0 .6em 1.2em'
-    },
-    wizzlet_jr: {
-        borderRadius: '3em',
-        width: '2.5em',
-        height: '2.5em',
-        marginTop: '1.5em'
-    },
-    postImage: {
-        display: 'flex',
-        margin: '0 auto 1em auto',
-        width: 'auto',
-        height: '15em',
-        borderRadius: '.4em'
-    },
-    listTitle: {
-        padding: '0',
-        margin: '1.7em 0 0 .4em',
-        color: 'rgba(3, 0, 39, 1)'
-    },
-    listDescription: {
-        margin: '0',
-        padding: '0',
-        color: 'rgba(3, 0, 39, 1)'
-    },
-    editButton: {
-        border: 'none',
-        color: 'rgba(21, 30, 63, 1)',
-        background: 'none',
-        margin: '.2em .2em 0 0',
-        padding: '2.4em 0em 1.1em 0em',
-        float: 'right'
-    },
-   deleteButton: {
-        border: 'none',
-        color: 'rgba(21, 30, 63, 1)',
-        background: 'none',
-        margin: '.2em 1.6em 0 0',
-        padding: '2.4em 0em 1.1em 0em',
-        float: 'right'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: '0'
     }
+  
 }
+
+// header implemented on all views / profile display (needs more style) / profile button needs to be implemented

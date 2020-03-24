@@ -123,6 +123,7 @@ removeName = key => {
         <div style={styles.container}>
           {/* Pass throught the props */}
           <Header searchList={this.searchList} />
+          <h1 style={styles.h1}>Newsfeed</h1>
           <main style={styles.main}>
             <Nav style={styles.mainNav} />
             <section style={styles.addPostCard}>
@@ -172,4 +173,11 @@ const styles= {
     borderRadius: '1em',
     margin: '2em'
   },
+  h1: {
+    margin: '.6em 0 .82em 2em',
+    fontFamily: 'Helvetica Neue',
+    fontSize: '2em',
+    color: 'rgba(3, 0, 39, 1)',
+    textDecoration: 'none'
+  }
 }
