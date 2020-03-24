@@ -7,7 +7,7 @@ const Nav = () => {
         <nav style={styles.navContainer}>
             {/* Profile for header? */}
             {/* Profile should go where the sprocket is in the header. Not in the navigation */}
-            <NavLink style={styles.a} to="/Profile">Profile</NavLink>
+            {/* <NavLink style={styles.a} to="/Profile">Profile</NavLink> */}
             <NavLink style={styles.a}  to="/NewsFeed">Newsfeed</NavLink>
             <NavLink style={styles.a}  to="/Messages">Messages</NavLink>
             <NavLink style={styles.a}  to="/Watch">Watch</NavLink>

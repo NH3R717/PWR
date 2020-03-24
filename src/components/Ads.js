@@ -1,6 +1,6 @@
 import React from 'react'
 
-//this is the container for a single ad.
+//container for a single ad.
 const Ads = props => {
     return (
         <div style={styles.adImage} key={props.id}>

@@ -28,17 +28,11 @@ class Profile extends Component {
     componentDidMount() {
         this.fetchRandomUser();
 }
-    fetchRandomUser() {
-
-        // this.setState({
-        //     userArray: []
-        // })
-
+    fetchRandomUser(){
         fetch('https://randomuser.me/api')
         .then(response => response.json())
         .then(parsedJSON => parsedJSON.results.map(user => ({
                 picture: `${user.thumbnail}`,
-                //The left side is the key. The right side is for the value. The value is coming from the api object.
                 first:`${user.name.first}`,
                 last:`${user.name.last}`,
                 name: `${user.name.first} ${user.name.last}`,
@@ -61,14 +55,12 @@ class Profile extends Component {
     }
 
     render() {
-
         let myAds = this.state.ads.map((element, i) => {
             return <Ads
               key={i}
               val={element} />
-          })
-
-        //Get the state
+        })
+        
         const { userArray } = this.state
         
             let contactsNew =userArray.map(contact => {
@@ -102,10 +94,10 @@ class Profile extends Component {
             </main>
             <Footer />
             </section>
-           
         );
     }
 }
+
 export default Profile
 
 const styles = {

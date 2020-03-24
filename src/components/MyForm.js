@@ -45,9 +45,6 @@ const styles= {
         fontFamily: 'Helvetica Neue',
         margin:'0 0 1em 0'
     },
-    // myBtn: {
-    //     height: '100px'
-    // },
     input: {
         margin: '1em',
         padding: '0',

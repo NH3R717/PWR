@@ -14,6 +14,8 @@ class Watch extends Component {
     }
 }
 
+export default Watch
+
 const styles = {
     h1: {
         margin: '.6em 0 .82em 2em',
@@ -23,6 +25,3 @@ const styles = {
         textDecoration: 'none'
       }
     }
-
-
-export default Watch

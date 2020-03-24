@@ -2,13 +2,11 @@ import React from 'react'
 import { FiSend } from "react-icons/fi";;
 
 const MyBtn = props => {
-    
     return (
     <button style={styles.myBtn} > <FiSend size={40} />
         {props.btnText}
         </button>
     )
-    
 }
 
 export default MyBtn

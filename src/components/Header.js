@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from './Search.js'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import s_cafe from '../images/s_cafe.png'
 import { IoIosSettings } from 'react-icons/io'
@@ -11,19 +11,15 @@ const Header = props => {
             <div>
                 <img src={s_cafe} alt="logo" style={styles.s_cafe} />
             </div>
-            <Search searchList={props.searchList}
-            placeholder=' Search ...'/>
+            <Search searchList={props.searchList} placeholder=' Search ...'/>
             <h1 style={styles.h1}>{props.pgTitle}</h1>
             <div style={styles.headerRight}>
                 <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
                 <h3 style={styles.h3}>Baby Wizzlet</h3>
-                
-                {/* Put the nav link here for the profile page. */}
-                <Link to="/profile">
-     <button style={styles.icon} > <IoIosSettings size={30} /> 
-     </button>
-                </Link>
-                {/* <button style={styles.icon} onClick={'/Profile'}> <IoIosSettings size={30} /> </button> */}
+                <NavLink to="/profile">
+                <button style={styles.icon} >
+                <IoIosSettings size={30} /> </button>
+                </NavLink>
             </div>
         </header>
     )
@@ -64,11 +60,9 @@ const styles= {
         marginLeft: '1.3em'
       },
       icon: {
-        borderRadius: '15em',
-        margin: '1.7em 1.5em 1.5em 1.5em',
+        margin: '2.3em 1.5em 1.5em 1.5em',
         border: 'none',
         color: 'rgba(21, 30, 63, 1)',
         background: 'none',
-
       }
 }

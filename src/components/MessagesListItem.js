@@ -2,7 +2,6 @@ import React from 'react'
 import { IoMdClose } from 'react-icons/io'
 
 const MessageListItem = props => {
-
     return (
         <li key={props.id} style={styles.listGroup}>
             <div style={styles.messageContent}>
@@ -17,7 +16,6 @@ const MessageListItem = props => {
             </div>
         </li>      
     )
-    
 }
 
 export default MessageListItem
@@ -65,6 +63,6 @@ const styles = {
         padding: '0',
         width: '4em',
         color: 'rgba(3, 0, 39, 1)'
-},
+}
 }
 

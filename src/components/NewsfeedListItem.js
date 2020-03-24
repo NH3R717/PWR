@@ -3,18 +3,17 @@ import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import { IoMdClose } from 'react-icons/io'
 import { TiEdit } from "react-icons/ti";
 
-const NewsfeedListItem = props => {
-    
+const NewsfeedListItem = props => {  
     return (
         <li key={props.id} style={styles.listGroup}>
             <div style={styles.avatarTitleButton}>
                 <div style={styles.avatarTitle}> 
-                <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
-                <span style={styles.listTitle}>{props.val.postTitle}</span> 
+                    <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+                    <span style={styles.listTitle}>{props.val.postTitle}</span> 
                 </div>
                 <div>
-                <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
-                <button style={styles.editButton} > <TiEdit size={30} /></button>
+                    <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
+                    <button style={styles.editButton} > <TiEdit size={30} /></button>
                 </div>
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />

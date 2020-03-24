@@ -10,9 +10,7 @@ class Routes extends Component {
         return (
             <section>
                 <Switch>
-                    {/* this link is for the inital load. The root file. */}
                     <Route exact path='/' component={Newsfeed} />
-                    {/* this is for the navigation link */}
                     <Route exact path='/Newsfeed' component={Newsfeed} />
                     <Route exact path='/Messages' component={Messages} />
                     <Route exact path='/Watch' component={Watch} />
