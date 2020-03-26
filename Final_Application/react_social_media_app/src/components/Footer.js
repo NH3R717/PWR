@@ -23,6 +23,6 @@ const styles = {
         bottom: '0',
         left: '0',
         right: '0',
-        height: '4em'
+        height: '3.2em'
     }
 }

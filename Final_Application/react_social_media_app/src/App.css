@@ -8,7 +8,7 @@ rgba(51, 102, 153, 1); – Lapis Lazuli
 rgba(250, 244, 113, 1); – Sunny
 rgba(219, 43, 57, 1); – Rusty Red */
 
-/* h1 {
-    border-style: dashed;
-    border
-} */
+h1 {
+   flex-direction: column;
+   justify-content: ; 
+}

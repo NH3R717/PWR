@@ -4,7 +4,7 @@ import React from 'react'
 const Ads = props => {
     return (
         <div style={styles.adImage} key={props.id}>
-            <h2 style={styles.freshApps}>{props.val.adTitle}</h2>
+            <h2 style={styles.freshH2}>{props.val.adTitle}</h2>
             <img style={styles.adBox} src={props.val.adImg} alt="advert" />
         </div>
     )
@@ -12,8 +12,8 @@ const Ads = props => {
 export default Ads
 
 const styles = {
-    freshApps: {
-        margin: '2em 2.3em 0 .2em',
+    freshH2: {
+        // margin: '2em 2.3em 0 .2em',
         color: 'rgba(3, 0, 39, 1)',
     },
     adBox: {

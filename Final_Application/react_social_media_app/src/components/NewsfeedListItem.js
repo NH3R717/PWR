@@ -3,13 +3,13 @@ import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import { IoMdClose } from 'react-icons/io'
 import { TiEdit } from "react-icons/ti";
 
-const NewsfeedListItem = props => {  
+const NewsfeedListItem = props => {
     return (
         <li key={props.id} style={styles.listGroup}>
             <div style={styles.avatarTitleButton}>
-                <div style={styles.avatarTitle}> 
+                <div style={styles.avatarTitle}>
                     <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
-                    <span style={styles.listTitle}>{props.val.postTitle}</span> 
+                    <span style={styles.listTitle}>{props.val.postTitle}</span>
                 </div>
                 <div>
                     <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
@@ -18,7 +18,7 @@ const NewsfeedListItem = props => {
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />
             <span style={styles.listDescription}>{props.val.postDescription}</span>
-        </li>      
+        </li>
     )
 }
 
@@ -51,8 +51,8 @@ const styles = {
     postImage: {
         display: 'flex',
         margin: '0 auto 1em auto',
-        width: 'auto',
-        height: '15em',
+        maxWidth: '100%',
+        maxHeight: '100%',
         borderRadius: '.4em'
     },
     listTitle: {
@@ -73,7 +73,7 @@ const styles = {
         padding: '2.4em 0em 1.1em 0em',
         float: 'right'
     },
-   deleteButton: {
+    deleteButton: {
         border: 'none',
         color: 'rgba(21, 30, 63, 1)',
         background: 'none',
