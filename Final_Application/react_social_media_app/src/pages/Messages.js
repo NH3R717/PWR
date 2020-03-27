@@ -96,14 +96,14 @@ const styles = {
   list: {
     width: '100%'
   },
-  asideAd: {
-    margin: '0 1.8em 0 1em'
-  },
   h1: {
     margin: '.6em 0 .82em 2em',
     fontFamily: 'Helvetica Neue',
     fontSize: '2em',
     color: 'rgba(3, 0, 39, 1)',
     textDecoration: 'none'
-  }
+  },
+//   asideAd: {
+//     margin: '0 1.8em 0 1em'
+//   }
 }

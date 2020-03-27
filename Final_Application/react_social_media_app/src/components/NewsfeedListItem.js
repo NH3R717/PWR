@@ -1,7 +1,9 @@
 import React from 'react'
 import wizzlet_jr from '../images/wizzlet_jr.jpg'
-import { IoMdClose } from 'react-icons/io'
-import { TiEdit } from "react-icons/ti";
+import IconButton from '@material-ui/core/IconButton'
+import HighlightOffTwoToneIcon from '@material-ui/icons/HighlightOffTwoTone'
+// import { IoMdClose } from 'react-icons/io'
+// import { TiEdit } from "react-icons/ti";
 
 const NewsfeedListItem = props => {
     return (
@@ -12,8 +14,14 @@ const NewsfeedListItem = props => {
                     <span style={styles.listTitle}>{props.val.postTitle}</span>
                 </div>
                 <div>
-                    <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
-                    <button style={styles.editButton} > <TiEdit size={30} /></button>
+                <button style={styles.deleteButton} onClick={props.delMe}>
+        <IconButton style={styles.mUIBtn} aria-label="send post" component="span"> {props.btnText}
+          <HighlightOffTwoToneIcon style={{ fontSize: 40 }}/>
+        </IconButton>
+        </button>
+                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
+                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
+                    {/* <button style={styles.editButton} > <TiEdit size={30} /></button> */}
                 </div>
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />
@@ -65,20 +73,28 @@ const styles = {
         padding: '0',
         color: 'rgba(3, 0, 39, 1)'
     },
-    editButton: {
-        border: 'none',
+    // editButton: {
+    //     border: 'none',
+    //     color: 'rgba(21, 30, 63, 1)',
+    //     background: 'none',
+    //     margin: '.2em .2em 0 0',
+    //     padding: '2.4em 0em 1.1em 0em',
+    //     float: 'right'
+    // },
+    mUIBtn: {
+        // border: 'none',
         color: 'rgba(21, 30, 63, 1)',
-        background: 'none',
-        margin: '.2em .2em 0 0',
-        padding: '2.4em 0em 1.1em 0em',
-        float: 'right'
+        // background: 'none',
+        margin: '0 -1em 0 0',
+        // padding: '2.4em 0em 1.1em 0em',
+        // float: 'right'
     },
     deleteButton: {
         border: 'none',
-        color: 'rgba(21, 30, 63, 1)',
+        // color: 'rgba(21, 30, 63, 1)',
         background: 'none',
-        margin: '.2em 1.6em 0 0',
-        padding: '2.4em 0em 1.1em 0em',
+        // margin: '.2em 1.6em 0 0',
+        // padding: '2.4em 0em 1.1em 0em',
         float: 'right'
     }
 }

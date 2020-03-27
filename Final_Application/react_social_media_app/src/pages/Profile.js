@@ -86,13 +86,13 @@ const styles = {
         flexDirection: 'row',
         padding: '0',
         margin: '0',
-        width: '100%',
+        // width: '100%',
         justifyContent: 'space-between',
     },
     list: {
         padding: '0',
         margin: '0',
-        width: '100%'
+        // width: '100%'
     },
     h1: {
         margin: '.6em 0 1em 2em',

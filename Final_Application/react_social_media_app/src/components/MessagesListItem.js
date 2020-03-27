@@ -1,5 +1,7 @@
 import React from 'react'
-import { IoMdClose } from 'react-icons/io'
+import IconButton from '@material-ui/core/IconButton'
+import HighlightOffTwoToneIcon from '@material-ui/icons/HighlightOffTwoTone'
+// import { IoMdClose } from 'react-icons/io'
 
 const MessageListItem = props => {
     return (
@@ -10,7 +12,12 @@ const MessageListItem = props => {
                     <p style={styles.message}>{props.val.message}</p> 
                 </div>
                 <div style={styles.timeButton}>
-                    <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button>
+                <button style={styles.deleteButton} onClick={props.delMe}>
+        <IconButton style={styles.mUIBtn} aria-label="send post" component="span"> {props.btnText}
+          <HighlightOffTwoToneIcon style={{ fontSize: 40 }}/>
+        </IconButton>
+        </button>
+                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
                     <p style={styles.time}>{props.val.time}</p> 
                 </div>
             </div>
@@ -50,14 +57,22 @@ const styles = {
         justifyContent: 'space-between',
         margin: '0'
     },
-   deleteButton: {
-        border: 'none',
+    mUIBtn: {
+        // border: 'none',
         color: 'rgba(21, 30, 63, 1)',
+        // background: 'none',
+        margin: '0 -1em 0 0',
+        // padding: '2.4em 0em 1.1em 0em',
+        // float: 'right'
+    },
+    deleteButton: {
+        border: 'none',
+        // color: 'rgba(21, 30, 63, 1)',
         background: 'none',
-        margin: '0 0 0 0',
-        padding: '1em 0em 1.1em 0em',
+        // margin: '.2em 1.6em 0 0',
+        // padding: '2.4em 0em 1.1em 0em',
         float: 'right'
-   },
+    },
    time: {
         margin: '0',
         padding: '0',
