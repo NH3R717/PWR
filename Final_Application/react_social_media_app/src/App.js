@@ -106,13 +106,6 @@ const styles = {
         color: 'rgba(3, 0, 39, 1)',
         textDecoration: 'none'
     },
-    videoContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    tubeVideo: {
-        margin: '0 0 2em 0'
-    },
     asideAd: {
         margin: '0 1.8em 0 1em'
     },

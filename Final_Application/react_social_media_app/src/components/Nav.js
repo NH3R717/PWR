@@ -1,16 +1,19 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 // with functionality use class
 const Nav = () => {
     return (
         <nav style={styles.navContainer}>
-            {/* Profile for header? */}
-            {/* Profile should go where the sprocket is in the header. Not in the navigation */}
-            {/* <NavLink style={styles.a} to="/Profile">Profile</NavLink> */}
-            <NavLink style={styles.a}  to="/NewsFeed">Newsfeed</NavLink>
-            <NavLink style={styles.a}  to="/Messages">Messages</NavLink>
-            <NavLink style={styles.a}  to="/Watch">Watch</NavLink>
+        <ButtonGroup orientation="vertical" variant="text" size="medium">
+           
+                <Button><NavLink style={styles.a} to="/NewsFeed">Newsfeed</NavLink></Button>
+                <Button><NavLink style={styles.a} to="/Messages">Messages</NavLink></Button>
+                <Button><NavLink style={styles.a} to="/Watch">Watch</NavLink></Button>
+            
+        </ButtonGroup>
         </nav>
     )
 }
@@ -21,6 +24,7 @@ export default Nav
 
 const styles = {
     navContainer: {
+        margin: '0 1em 0 0',
         padding: '2em 0 0 1.5em',
         display: 'flex',
         flexDirection: 'column',

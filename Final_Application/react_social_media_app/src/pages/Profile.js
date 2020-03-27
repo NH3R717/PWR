@@ -72,13 +72,26 @@ class Profile extends Component {
 export default Profile
 
 const styles = {
+    allContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '0',
+        margin: '0',
+        // width: '100%',
+        // justifyContent: 'center'
+    },
     main: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        padding: '0',
+        margin: '0',
+        width: '100%',
+        justifyContent: 'space-between',
     },
     list: {
-        padding: '0 1em',
+        padding: '0',
+        margin: '0',
         width: '100%'
     },
     h1: {
@@ -87,9 +100,6 @@ const styles = {
         fontSize: '2em',
         color: 'rgba(3, 0, 39, 1)',
         textDecoration: 'none'
-    },
-    asideAd: {
-        margin: '0 1.8em 0 1em'
     },
 }
 
