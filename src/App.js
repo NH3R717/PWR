@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+                                                  // Why styles at the end?
+//import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './components/Routes'; import Nav from './components/Nav'
 import Header from './components/Header'
 import Ads from './components/Ads'
 import Footer from './components/Footer'
-// import { purple } from '@material-ui/core/colors';
+import { purple, blue } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#faf471',
-            main: '#336699',
-            dark: '#030027',
-            contrastText: '#fff',
+            light: blue[300],
+            main: blue[500],
+            dark: blue[900],
+            contrastText: '#000',
         },
         secondary: {
-            light: '#030027',
-            main: '#030027',
-            dark: '#ba000d',
-            contrastText: '#000',
+            light: purple[300],
+            main: purple[500],
+            dark: purple[900],
+            contrastText: '#fff',
         },
     },
 });

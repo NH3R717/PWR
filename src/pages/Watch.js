@@ -15,8 +15,8 @@ class Watch extends Component {
 
   render() {
     const opts = {
-      height: '183',
-      width: '300',
+      // height: '183',
+      width: '100%',
       playerVars: {
         autoplay: 0,
         loop: 1
@@ -29,39 +29,33 @@ class Watch extends Component {
         {/* <Header /> */}
         <h1 style={styles.h1}>Watch</h1>
         <main style={styles.mainContainer}>
-
           <section style={styles.videoContainer}>
-
             <article style={styles.tubeVideo}>
               <YouTube
                 videoId="8XEagDbPop4"
                 opts={opts}
-                onReady={this._onReady} />
+                onReady={this._onReady}
+                />
             </article>
-
             <article style={styles.tubeVideo}>
               <YouTube
                 videoId="Y2vS8dPMR2U"
                 opts={opts}
-                onReady={this._onReady} />
+                onReady={this._onReady}
+                style={styles.videoContainer} 
+                />
             </article>
-
             <article style={styles.tubeVideo}>
               <YouTube
                 videoId="01vuhp5WgXM"
                 opts={opts}
                 onReady={this._onReady} />
             </article>
-
           </section>
-
         </main>
-
       </div>
     );
-
   }
-
 }
 
 export default Watch
@@ -85,8 +79,8 @@ const styles = {
   },
   videoContainer: {
     display: 'flex',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    width: '100%',
+    height: '100%',
     flexDirection: 'column',
   },
   tubeVideo: {

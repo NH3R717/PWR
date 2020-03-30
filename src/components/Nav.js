@@ -7,13 +7,11 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 const Nav = () => {
     return (
         <nav style={styles.navContainer}>
-        <ButtonGroup orientation="vertical" variant="text">
-           
+            <ButtonGroup orientation="vertical" variant="text" color="primary" aria-label="outlined primary button group">
                 <Button><NavLink style={styles.a} to="/NewsFeed">Newsfeed</NavLink></Button>
                 <Button><NavLink style={styles.a} to="/Messages">Messages</NavLink></Button>
                 <Button><NavLink style={styles.a} to="/Watch">Watch</NavLink></Button>
-            
-        </ButtonGroup>
+            </ButtonGroup>
         </nav>
     )
 }

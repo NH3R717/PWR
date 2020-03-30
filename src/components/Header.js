@@ -4,23 +4,29 @@ import { NavLink } from 'react-router-dom'
 import wizzlet_jr from '../images/wizzlet_jr.jpg'
 import s_cafe from '../images/s_cafe.png'
 import { IoIosSettings } from 'react-icons/io'
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 const Header = props => {
     return (
         <header style={styles.header}>
-            <div>
-                <img src={s_cafe} alt="logo" style={styles.s_cafe} />
-            </div>
-            <Search searchList={props.searchList} placeholder=' Search ...' />
-            <h1 style={styles.h1}>{props.pgTitle}</h1>
-            <div style={styles.headerRight}>
-                <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
-                <h3 style={styles.h3}>Baby Wizzlet</h3>
-                <NavLink to="/profile">
-                    <button style={styles.icon} >
-                        <IoIosSettings size={30} /> </button>
-                </NavLink>
-            </div>
+            <AppBar position="static">
+                <Toolbar>
+                    <div>
+                        <img src={s_cafe} alt="logo" style={styles.s_cafe} />
+                    </div>
+                    <Search searchList={props.searchList} placeholder=' Search ...' />
+                    <h1 style={styles.h1}>{props.pgTitle}</h1>
+                    <div style={styles.headerRight}>
+                        <img src={wizzlet_jr} alt="dog" style={styles.wizzlet_jr} />
+                        <h3 style={styles.h3}>Baby Wizzlet</h3>
+                        <NavLink to="/profile">
+                            <button style={styles.icon} >
+                                <IoIosSettings size={30} /> </button>
+                        </NavLink>
+                    </div>
+                </Toolbar>
+            </AppBar>
         </header>
     )
 }
