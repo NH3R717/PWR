@@ -14,10 +14,6 @@ const ProfileListItem = props => {
                     <h3 style={styles.userID}>{props.login}</h3>
                 </header>
                 <div style={styles.nameGroup}>
-                    {/* <div style={styles.lineItemGroup}>
-                        <li style={styles.lineItemType}>User Name: </li>
-                        <li style={styles.lineItemDescription}>{props.login}</li>
-                    </div> */}
                     <div style={styles.lineItemGroup}>
                         <li style={styles.lineItemType}>First Name: </li>
                         <li style={styles.lineItemDescription}>{props.first}</li>
@@ -74,58 +70,44 @@ const styles = {
     listGroup: {
         listStyle: 'none',
         display: 'flex',
-        // margin: '0 0 1em 0',
         padding: '0 1em 0 1em',
-        // width: '100%', !NO
         justifyContent: 'space-between',
-        // backgroundColor: 'rgba(51, 102, 153, .65)',
         borderRadius: '.6em',
         fontFamily: 'Helvetica Neue'
     },
     nameGroup: {
         display: 'flex',
         flexDirection: 'column',
-        // listStyle: 'none',
-        // margin: '0 0 1em 0',
         padding: '0 .5em 0 .5em',
-        // width: '100%',
         justifyContent: 'space-between',
     },
     addressGroup: {
         display: 'flex',
         flexDirection: 'column',
-        // listStyle: 'none',
-        // margin: '0 0 1em 0',
         padding: '0 .5em 0 .5em',
-        // width: '100%',
         justifyContent: 'space-between',
     },
     profileContent: {
-        // margin: '1em 0 1em 0',
         padding: '1em 0 .5em 0',
         display: 'flex',
         flexDirection: 'column',
-        // width: '100%',
         justifyContent: 'space-between',
         margin: '0'
     },
     lineItemGroup: {
         display: 'flex',
         flexDirection: 'row',
-        // width: '100%',
         justifyContent: 'space-between',
         margin: '0 0 .5em 0'
     },
     lineItemType: {
         display: 'flex',
-        // flexDirection: 'column',
         fontSize: '1.5em',
         justifyContent: 'space-between',
         margin: '0'
     },
     lineItemDescription: {
         display: 'flex',
-        // flexDirection: 'column',
         fontSize: '1.2em',
         justifyContent: 'space-between',
         margin: '0'

@@ -39,7 +39,6 @@ class Profile extends Component {
     render() {
 
         const { userArray } = this.state
-
         let contactsNew = userArray.map(contact => {
             const { picture, username, street, city, state, postcode, email, phone, name, first, last, login } = contact
             return <ProfileListItem
@@ -78,21 +77,17 @@ const styles = {
         justifyContent: 'space-between',
         padding: '0',
         margin: '0',
-        // width: '100%',
-        // justifyContent: 'center'
     },
     main: {
         display: 'flex',
         flexDirection: 'row',
         padding: '0',
         margin: '0',
-        // width: '100%',
         justifyContent: 'space-between',
     },
     list: {
         padding: '0',
         margin: '0',
-        // width: '100%'
     },
     h1: {
         margin: '.6em 0 1em 2em',

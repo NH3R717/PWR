@@ -24,12 +24,6 @@ const theme = createMuiTheme({
     },
 });
 
-// let myAds = this.state.ads.map((element, i) => {
-//     return <Ads
-//         key={i}
-//         val={element} />
-// })
-
 /* Coolers.co color profile – https://coolors.co/151e3f-030027-336699-faf471-db2b39
 
 rgba(21, 30, 63, 1),  – Yankees Blue

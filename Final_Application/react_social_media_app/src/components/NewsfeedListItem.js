@@ -19,9 +19,6 @@ const NewsfeedListItem = props => {
           <HighlightOffTwoToneIcon style={{ fontSize: 40 }}/>
         </IconButton>
         </button>
-                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
-                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
-                    {/* <button style={styles.editButton} > <TiEdit size={30} /></button> */}
                 </div>
             </div>
             <img src={props.val.postImage} alt="post" style={styles.postImage} />

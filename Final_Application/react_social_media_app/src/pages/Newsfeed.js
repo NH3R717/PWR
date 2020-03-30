@@ -45,20 +45,14 @@ class Newsfeed extends Component {
   // adds input values to data object
   addName = e => {
     e.preventDefault()
-    //This is grabbing only the postTitle if it is at the first level
-    //You need to have it point to the postList then postTitle. Its not drilling  down the object
     if (this.state.postList.titleInput === 'null' || this.state.postList.titleInput === '') {
       alert('Add a title.');
-      // if (this.state.postList.titleInput.val === 'null' || this.state.postList.titleInput.val === '') {
-      //   alert('Add a title.');
     } else if (this.state.postList.postDescription === '' || this.state.postList.postDescription === '') {
       alert('Add a description.');
     } else {
       this.setState({
         postList: [...this.state.postList, { postTitle: this.state.titleInput, postDescription: this.state.descriptionInput }]
       });
-
-      // ** not adding first item to the LS – probably won't have time to figure out why (from video)  
       let postList = [...this.state.postList]
       localStorage.setItem('postList', JSON.stringify(postList))
       this.setState({ titleInput: '' })

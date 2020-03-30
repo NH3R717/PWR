@@ -23,9 +23,8 @@ const styles = {
         borderStyle: 'solid',
         borderRadius: '.4em',
         borderColor: 'rgba(51, 102, 153, 1)',
-        // border: '',
         backgroundColor: 'rgba(250, 244, 113, 1)',
-        fontSize: '1.25em',   
+        fontSize: '1.25em',
     },
     searchButton: {
         margin: '1.3em 0 1em 0em',

@@ -8,35 +8,12 @@ import YouTube from 'react-youtube'
 
 class Watch extends Component {
 
-  // state = {
-  //   userArray: [],
-  //   ads: [
-  //     {
-  //       adImg: require('../images/ads/freshApp1.jpg'),
-  //       adTitle: 'Task Tracker'
-  //     },
-  //     {
-  //       adImg: require('../images/ads/freshApp2.jpg'),
-  //       adTitle: 'Wagui TW'
-  //     },
-  //     {
-  //       adImg: require('../images/ads/freshApp3.jpg'),
-  //       adTitle: 'Taco Town'
-  //     }]
-  // }
-
   _onReady(event) {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
   }
 
   render() {
-
-    // let myAds = this.state.ads.map((element, i) => {
-    //   return <Ads
-    //     key={i}
-    //     val={element} />
-    // })
     const opts = {
       height: '183',
       width: '300',

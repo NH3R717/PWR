@@ -8,20 +8,19 @@ const MessageListItem = props => {
         <li key={props.id} style={styles.listGroup}>
             <div style={styles.messageContent}>
                 <div style={styles.senderMessage}>
-                    <h2 style={styles.sender}>{props.val.sender}</h2> 
-                    <p style={styles.message}>{props.val.message}</p> 
+                    <h2 style={styles.sender}>{props.val.sender}</h2>
+                    <p style={styles.message}>{props.val.message}</p>
                 </div>
                 <div style={styles.timeButton}>
-                <button style={styles.deleteButton} onClick={props.delMe}>
-        <IconButton style={styles.mUIBtn} aria-label="send post" component="span"> {props.btnText}
-          <HighlightOffTwoToneIcon style={{ fontSize: 40 }}/>
-        </IconButton>
-        </button>
-                    {/* <button style={styles.deleteButton} onClick={props.delMe}> <IoMdClose size={30} /></button> */}
-                    <p style={styles.time}>{props.val.time}</p> 
+                    <button style={styles.deleteButton} onClick={props.delMe}>
+                        <IconButton style={styles.mUIBtn} aria-label="send post" component="span"> {props.btnText}
+                            <HighlightOffTwoToneIcon style={{ fontSize: 40 }} />
+                        </IconButton>
+                    </button>
+                    <p style={styles.time}>{props.val.time}</p>
                 </div>
             </div>
-        </li>      
+        </li>
     )
 }
 
@@ -73,11 +72,11 @@ const styles = {
         // padding: '2.4em 0em 1.1em 0em',
         float: 'right'
     },
-   time: {
+    time: {
         margin: '0',
         padding: '0',
         width: '4em',
         color: 'rgba(3, 0, 39, 1)'
-}
+    }
 }
 

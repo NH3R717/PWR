@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-// import Header from '../components/Header'
-// import Nav from '../components/Nav'
-// import Ads from '../components/Ads'
-// import Footer from '../components/Footer'
 import MessagesListItem from '../components/MessagesListItem'
 
 class Messages extends Component {
