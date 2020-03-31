@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MyForm from '../components/MyForm.js'
 import NewsfeedListItem from '../components/NewsfeedListItem'
-
+import Header from '../components/Header';
 function searchAlist(search) {
   return function (searchMe) {
     return searchMe.postTitle.toLowerCase().includes(search.toLowerCase()) || !search
@@ -72,25 +72,27 @@ class Newsfeed extends Component {
   }
 
   render() {
+     // for the search
+    const { search } = this.state
     // for the postList
-    let myList = this.state.postList.map((element, i) => {
+    let myList = this.state.postList.filter(searchAlist(search)).map((element, i) => {
       return <NewsfeedListItem
         key={i}
         val={element}
         delMe={() => this.removeName(i)} />
     })
 
-    // for the search
-    const { search } = this.state
-    myList = this.state.postList.filter(searchAlist(search)).map((element, i) => {
-      return <NewsfeedListItem
-        key={i}
-        val={element}
-        delMe={() => this.removeName(i)} />
-    })
+   
+    // myList = this.state.postList.filter(searchAlist(search)).map((element, i) => {
+    //   return <NewsfeedListItem
+    //     key={i}
+    //     val={element}
+    //     delMe={() => this.removeName(i)} />
+    // })
 
     return (
       <div style={styles.allContainer}>
+        <Header searchList={this.searchList} />
         <h1 style={styles.h1}>Newsfeed</h1>
         <main style={styles.main}>
           <section style={styles.addPostCard}>

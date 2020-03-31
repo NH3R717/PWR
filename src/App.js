@@ -63,8 +63,11 @@ class App extends Component {
             <Router>
                 <MuiThemeProvider theme={theme}>
                     <div>
+                            {/* Your search is not working because it is one level higher than the parent class. It does not understand. */}
+                            {/* You could use redux for this*/}
                         <Header />
                         <main style={styles.mainContainer}>
+        
                             <Nav />
 
                             <Routes />
